@@ -22,7 +22,15 @@ struct FeedMe {
         static var dishID: Int?
         static var images: [String: UIImage]?
         static var order: Order?
-        static var dishes: [Dish]?
+        static var dishes: [Int: Dish]!
     }
         
+}
+
+enum DishType: String {
+    case Staple = "Staple"
+    case Soup = "Soup"
+    case Dessert = "Dessert"
+    case Drinks = "Drinks"
+    case Others = "Others"
 }
