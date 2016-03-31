@@ -8,24 +8,125 @@
 
 import UIKit
 
-class OrderTableViewController: UITableViewController {
+class OrderTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate, SSRadioButtonControllerDelegate {
     
     @IBOutlet weak var totalPrice: UILabel!
-
+    @IBOutlet weak var deliveryFeeLabel: UILabel!
+    @IBOutlet weak var totalFeeLabel: UILabel!
+    @IBOutlet weak var deliveryAddressLabel: UILabel!
+    
+    @IBOutlet weak var addressSelectionView: UIView!
+    
+    
+    var defaultDeliveryAddress: Address?
+    var otherDeliveryAddresses = [Address]()
+//    var radioButtons: [UIButton]?
+//    var radioButtonController: SSRadioButtonsController?
+    
     override func viewDidLoad() {
-        super.viewDidLoad() 
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        super.viewDidLoad()
         
-        totalPrice.text = "$" + String(format: "%.2f", FeedMe.Variable.order!.totalPrice)
+        if FeedMe.Variable.order != nil {
+            totalPrice.text = "$" + String(format: "%.2f", FeedMe.Variable.order!.totalPrice)
+        } else {
+            totalPrice.text = "$" + String(format: "%.2f", 0)
+        }
+        
+        FeedMe.Variable.selectedDeliveryAddress = User().defaultDeliveryAddress!
+        FeedMe.Variable.selectedDeliveryAddress.setAsSelected()
+        deliveryAddressLabel.text = FeedMe.Variable.selectedDeliveryAddress.toSimpleAddressString()
+        updateGrandTotalFee()
+    
+        loadAddresses()
+        // configureRadioButtonView(addressSelectionView)
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        self.deliveryAddressLabel.text = FeedMe.Variable.selectedDeliveryAddress.toSimpleAddressString()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    
+    func updateGrandTotalFee() {
+        var grandTotalString = deliveryFeeLabel.text!
+        grandTotalString.removeAtIndex(grandTotalString.startIndex)
+        let grandTotal = FeedMe.Variable.order!.totalPrice + Double(grandTotalString)!
+        totalFeeLabel.text = "$" + String(format: "%.2f", grandTotal)
+    }
+    
+    
+    // MARK: - configure addresses selction view.
+    
+    /*
+    func addRadioButton(view: UIView, _ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat, _ text: String ) -> SSRadioButton {
+        
+        let button = SSRadioButton()
+        
+        button.frame = CGRectMake(x, y, width, height)
+        button.backgroundColor = UIColor(red: 0.82, green: 0.76, blue: 0.76, alpha: 1.0)
+        button.setTitle(text, forState: UIControlState.Normal)
+        button.titleLabel!.font = UIFont(name: "Times New Roman", size: 15)
+        button.titleLabel!.textColor = UIColor.darkTextColor()
+        button.addTarget(self, action: #selector(SSRadioButtonControllerDelegate.didSelectButton(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.view.addSubview(button)
+        
+        print(view.frame.origin.x, view.frame.origin.y, view.frame.width, view.frame.height)
+        print(button.frame.origin.x, button.frame.origin.y, button.frame.width, button.frame.height)
+        
+        return button
+    }
+    
+    func configureRadioButtonView(view: UIView) {
+        let x0 = view.frame.origin.x
+        let y0 = view.frame.origin.y
+        let width = view.frame.width
+        let height = view.frame.height
+        
+        let radioButtonHeight = 50.0
+        let firstRadioButton = addRadioButton(view, x0, y0, width, CGFloat(radioButtonHeight), defaultDeliveryAddress!.toSimpleAddressString())
+        
+        radioButtonController = SSRadioButtonsController(buttons: firstRadioButton)
+        
+        let circleRadius = 15
+        var y = y0 + CGFloat(circleRadius * 3 + 1)
+        for address in otherDeliveryAddresses {
+            radioButtonController?.addButton(addRadioButton(view, x0, y, width, CGFloat(radioButtonHeight), address.toSimpleAddressString()))
+            y += CGFloat(circleRadius * 3 + 1)
+        }
+        
+        
+        radioButtonController!.delegate = self
+        radioButtonController!.shouldLetDeSelect = true
+    }
+    
+    func didSelectButton(aButton: UIButton?) {
+     
+    }
+    */
+    
+    /**
+        To be changed.
+        */
+    func loadAddresses() {
+        defaultDeliveryAddress = Address(userName: "CSIT", addressLine1: "108 N Rd", addressLine2: "Acton", postcode: "2601", phone: "(02) 6125 5111", suburb: "Canberra", state: "ACT", selected: true)
+        
+        let otherAddress1 = Address(userName: "Jason", addressLine1: "109 N Rd", addressLine2: "Acton", postcode: "2601", phone: "(02) 6125 5111", suburb: "Canberra", state: "ACT", selected: false)
+        let otherAddress2 = Address(userName: "Jun Chen", addressLine1: "110 N Rd", addressLine2: "Acton", postcode: "2601", phone: "(02) 6125 5111", suburb: "Canberra", state: "ACT", selected: false)
+        otherDeliveryAddresses += [otherAddress1]
+        otherDeliveryAddresses += [otherAddress2]
+    }
+    
+    
+    // MARK: - IBActions.
+    
+    @IBAction func newAddressBtnClicked(sender: UIButton) {
+        
+
     }
     
     
@@ -35,6 +136,7 @@ class OrderTableViewController: UITableViewController {
         FeedMe.Variable.order!.addDish(FeedMe.Variable.order!.id2dish[cell.tag]!, qty: 1)
         cell.dishQtyLabel.text = String(Int(cell.dishQtyLabel.text!)! + 1)
         totalPrice.text = "$" + String(format: "%.2f", FeedMe.Variable.order!.totalPrice)
+        updateGrandTotalFee()
     }
     
     @IBAction func decreaseBtn(sender: UIButton) {
@@ -47,6 +149,7 @@ class OrderTableViewController: UITableViewController {
             cell.dishQtyLabel.text = String(newQty)
         }
         totalPrice.text = "$" + String(format: "%.2f", FeedMe.Variable.order!.totalPrice)
+        updateGrandTotalFee()
     }
     
 

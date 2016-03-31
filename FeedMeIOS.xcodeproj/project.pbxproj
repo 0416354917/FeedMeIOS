@@ -10,11 +10,15 @@
 		44308C491CA20DB8003E7BB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44308C481CA20DB8003E7BB4 /* Assets.xcassets */; };
 		961C2E221CA6197700C562F8 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C2E211CA6197700C562F8 /* OrderTableViewCell.swift */; };
 		961C2E241CA6199500C562F8 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C2E231CA6199500C562F8 /* OrderTableViewController.swift */; };
+		962C5CF01CAB7E010009CBF3 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C5CEE1CAB7E010009CBF3 /* SSRadioButton.swift */; };
+		962C5CF11CAB7E010009CBF3 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C5CEF1CAB7E010009CBF3 /* SSRadioButtonsController.swift */; };
+		962C5CF31CAB7E230009CBF3 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 962C5CF21CAB7E230009CBF3 /* LICENSE */; };
 		963C16AD1C98FFEC006C534E /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C16AC1C98FFEC006C534E /* RestaurantTableViewCell.swift */; };
 		963C16AF1C9904CE006C534E /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C16AE1C9904CE006C534E /* RestaurantTableViewController.swift */; };
 		963C16B11C9905AB006C534E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C16B01C9905AB006C534E /* Restaurant.swift */; };
 		963C16B21C9905AB006C534E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C16B01C9905AB006C534E /* Restaurant.swift */; };
 		963C16B31C9905AB006C534E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C16B01C9905AB006C534E /* Restaurant.swift */; };
+		964137061CABED9D0028C158 /* NewAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964137051CABED9D0028C158 /* NewAddressViewController.swift */; };
 		96A855121CA4F1B900B275AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A855111CA4F1B900B275AC /* background.png */; };
 		96CFC4FB1C87FF2A0086F4EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CFC4FA1C87FF2A0086F4EF /* AppDelegate.swift */; };
 		96CFC5001C87FF2A0086F4EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CFC4FE1C87FF2A0086F4EF /* Main.storyboard */; };
@@ -25,6 +29,10 @@
 		96D5D8921C9CF9F70049FC9D /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D5D8911C9CF9F70049FC9D /* Dish.swift */; };
 		96D5D8981C9D00540049FC9D /* DishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D5D8971C9D00540049FC9D /* DishTableViewCell.swift */; };
 		96D5D89A1C9D009C0049FC9D /* DishTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D5D8991C9D009C0049FC9D /* DishTableViewController.swift */; };
+		96EF93081CA90391002C6623 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF93071CA90391002C6623 /* User.swift */; };
+		96EF930C1CA916B1002C6623 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF930B1CA916B1002C6623 /* Address.swift */; };
+		96EF93141CA91821002C6623 /* AddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF93131CA91821002C6623 /* AddressTableViewCell.swift */; };
+		96EF93161CA91831002C6623 /* AddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF93151CA91831002C6623 /* AddressTableViewController.swift */; };
 		96F673DE1CA54F25003F8D82 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F673DD1CA54F25003F8D82 /* Order.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,9 +57,13 @@
 		44308C481CA20DB8003E7BB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		961C2E211CA6197700C562F8 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		961C2E231CA6199500C562F8 /* OrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
+		962C5CEE1CAB7E010009CBF3 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
+		962C5CEF1CAB7E010009CBF3 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
+		962C5CF21CAB7E230009CBF3 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		963C16AC1C98FFEC006C534E /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		963C16AE1C9904CE006C534E /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		963C16B01C9905AB006C534E /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		964137051CABED9D0028C158 /* NewAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAddressViewController.swift; sourceTree = "<group>"; };
 		96A855111CA4F1B900B275AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		96CFC4F71C87FF2A0086F4EF /* FeedMeIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedMeIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CFC4FA1C87FF2A0086F4EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +80,10 @@
 		96D5D8911C9CF9F70049FC9D /* Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		96D5D8971C9D00540049FC9D /* DishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishTableViewCell.swift; sourceTree = "<group>"; };
 		96D5D8991C9D009C0049FC9D /* DishTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishTableViewController.swift; sourceTree = "<group>"; };
+		96EF93071CA90391002C6623 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		96EF930B1CA916B1002C6623 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		96EF93131CA91821002C6623 /* AddressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTableViewCell.swift; sourceTree = "<group>"; };
+		96EF93151CA91831002C6623 /* AddressTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTableViewController.swift; sourceTree = "<group>"; };
 		96F673DD1CA54F25003F8D82 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,9 +112,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		962C5CED1CAB7DD00009CBF3 /* SSRadioButtonController */ = {
+			isa = PBXGroup;
+			children = (
+				962C5CF21CAB7E230009CBF3 /* LICENSE */,
+				962C5CEE1CAB7E010009CBF3 /* SSRadioButton.swift */,
+				962C5CEF1CAB7E010009CBF3 /* SSRadioButtonsController.swift */,
+			);
+			name = SSRadioButtonController;
+			sourceTree = "<group>";
+		};
 		96CFC4EE1C87FF2A0086F4EF = {
 			isa = PBXGroup;
 			children = (
+				962C5CED1CAB7DD00009CBF3 /* SSRadioButtonController */,
 				96CFC4F91C87FF2A0086F4EF /* FeedMeIOS */,
 				96CFC50E1C87FF2A0086F4EF /* FeedMeIOSTests */,
 				96CFC5191C87FF2A0086F4EF /* FeedMeIOSUITests */,
@@ -120,7 +147,11 @@
 			isa = PBXGroup;
 			children = (
 				96CFC4FA1C87FF2A0086F4EF /* AppDelegate.swift */,
+				96EF93071CA90391002C6623 /* User.swift */,
 				96D5D88F1C9CD4CB0049FC9D /* FeedMe.swift */,
+				96EF930B1CA916B1002C6623 /* Address.swift */,
+				96EF93131CA91821002C6623 /* AddressTableViewCell.swift */,
+				96EF93151CA91831002C6623 /* AddressTableViewController.swift */,
 				96D5D8911C9CF9F70049FC9D /* Dish.swift */,
 				96D5D8971C9D00540049FC9D /* DishTableViewCell.swift */,
 				96D5D8991C9D009C0049FC9D /* DishTableViewController.swift */,
@@ -130,6 +161,7 @@
 				963C16B01C9905AB006C534E /* Restaurant.swift */,
 				963C16AC1C98FFEC006C534E /* RestaurantTableViewCell.swift */,
 				963C16AE1C9904CE006C534E /* RestaurantTableViewController.swift */,
+				964137051CABED9D0028C158 /* NewAddressViewController.swift */,
 				44308C481CA20DB8003E7BB4 /* Assets.xcassets */,
 				96A855111CA4F1B900B275AC /* background.png */,
 				96CFC4FE1C87FF2A0086F4EF /* Main.storyboard */,
@@ -266,6 +298,7 @@
 				96A855121CA4F1B900B275AC /* background.png in Resources */,
 				44308C491CA20DB8003E7BB4 /* Assets.xcassets in Resources */,
 				96CFC5001C87FF2A0086F4EF /* Main.storyboard in Resources */,
+				962C5CF31CAB7E230009CBF3 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,16 +324,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				96D5D8981C9D00540049FC9D /* DishTableViewCell.swift in Sources */,
+				96EF93161CA91831002C6623 /* AddressTableViewController.swift in Sources */,
 				963C16B11C9905AB006C534E /* Restaurant.swift in Sources */,
+				96EF930C1CA916B1002C6623 /* Address.swift in Sources */,
+				962C5CF11CAB7E010009CBF3 /* SSRadioButtonsController.swift in Sources */,
 				963C16AD1C98FFEC006C534E /* RestaurantTableViewCell.swift in Sources */,
+				964137061CABED9D0028C158 /* NewAddressViewController.swift in Sources */,
 				96F673DE1CA54F25003F8D82 /* Order.swift in Sources */,
 				963C16AF1C9904CE006C534E /* RestaurantTableViewController.swift in Sources */,
 				96D5D8921C9CF9F70049FC9D /* Dish.swift in Sources */,
 				961C2E221CA6197700C562F8 /* OrderTableViewCell.swift in Sources */,
 				96CFC4FB1C87FF2A0086F4EF /* AppDelegate.swift in Sources */,
+				96EF93081CA90391002C6623 /* User.swift in Sources */,
+				96EF93141CA91821002C6623 /* AddressTableViewCell.swift in Sources */,
 				96D5D8901C9CD4CB0049FC9D /* FeedMe.swift in Sources */,
 				961C2E241CA6199500C562F8 /* OrderTableViewController.swift in Sources */,
 				96D5D89A1C9D009C0049FC9D /* DishTableViewController.swift in Sources */,
+				962C5CF01CAB7E010009CBF3 /* SSRadioButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

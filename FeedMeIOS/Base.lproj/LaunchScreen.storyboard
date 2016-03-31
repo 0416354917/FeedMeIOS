@@ -14,28 +14,15 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XUg-aL-vSz">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.79607843140000001" green="0.16078431369999999" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lauchimg2" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-4K-Jsl">
-                                <rect key="frame" x="324" y="294" width="155" height="152"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="155" id="mhX-hY-FiR"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lauchimg3" translatesAutoresizingMaskIntoConstraints="NO" id="qJd-SQ-Qkg">
-                                <rect key="frame" x="226" y="333" width="147" height="121"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="147" id="21v-ff-ghx"/>
-                                    <constraint firstAttribute="height" constant="121" id="QcY-fh-ywF"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="9HZ-gF-yVu">
-                                <rect key="frame" x="34" y="153" width="531" height="118"/>
+                                <rect key="frame" x="35" y="145" width="345" height="254"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="531" id="ru0-Rx-Uqu"/>
                                 </constraints>
@@ -45,27 +32,27 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright (c) 2016 FeedMe. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEU-pP-Rse">
+                                <rect key="frame" x="20" y="661" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="HfH-4K-Jsl" secondAttribute="bottom" constant="154" id="2LH-jx-Skd"/>
-                            <constraint firstItem="qJd-SQ-Qkg" firstAttribute="top" secondItem="9HZ-gF-yVu" secondAttribute="bottom" constant="62" id="5L4-TX-3SD"/>
                             <constraint firstItem="XUg-aL-vSz" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="7lY-J9-ygx"/>
                             <constraint firstItem="XUg-aL-vSz" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="91l-dM-o8b"/>
-                            <constraint firstItem="qJd-SQ-Qkg" firstAttribute="centerX" secondItem="XUg-aL-vSz" secondAttribute="centerX" id="Lwf-h6-XYR"/>
                             <constraint firstItem="XUg-aL-vSz" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="NVM-cb-OoE"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="qJd-SQ-Qkg" secondAttribute="bottom" constant="146" id="O8G-qR-eDX"/>
                             <constraint firstAttribute="trailing" secondItem="XUg-aL-vSz" secondAttribute="trailing" id="QNq-dc-Lyf"/>
                             <constraint firstItem="9HZ-gF-yVu" firstAttribute="width" secondItem="XUg-aL-vSz" secondAttribute="width" constant="-69" id="UaP-hI-vdV"/>
                             <constraint firstAttribute="trailing" secondItem="XUg-aL-vSz" secondAttribute="trailing" id="Y03-XS-0JB"/>
-                            <constraint firstItem="9HZ-gF-yVu" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="133" id="Y5L-KU-FBA"/>
-                            <constraint firstItem="HfH-4K-Jsl" firstAttribute="top" secondItem="9HZ-gF-yVu" secondAttribute="bottom" constant="23" id="bU7-mg-bB8"/>
+                            <constraint firstItem="9HZ-gF-yVu" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="125" id="Y5L-KU-FBA"/>
                             <constraint firstItem="9HZ-gF-yVu" firstAttribute="centerX" secondItem="XUg-aL-vSz" secondAttribute="centerX" id="bpt-YL-opR"/>
                             <constraint firstItem="XUg-aL-vSz" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ce4-va-d4d"/>
-                            <constraint firstItem="HfH-4K-Jsl" firstAttribute="leading" secondItem="qJd-SQ-Qkg" secondAttribute="trailing" constant="-49" id="m6Z-H7-yYi"/>
                             <constraint firstItem="XUg-aL-vSz" firstAttribute="top" secondItem="9HZ-gF-yVu" secondAttribute="bottom" constant="-271" id="mK4-V0-HwS"/>
                             <constraint firstItem="XUg-aL-vSz" firstAttribute="leading" secondItem="9HZ-gF-yVu" secondAttribute="trailing" constant="-565" id="t4m-hU-8Sc"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="9HZ-gF-yVu" secondAttribute="bottom" constant="329" id="tpb-OJ-yj9"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="9HZ-gF-yVu" secondAttribute="bottom" constant="337" id="tpb-OJ-yj9"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -76,6 +63,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,7 +72,5 @@
     </scenes>
     <resources>
         <image name="Logo" width="1072" height="260"/>
-        <image name="lauchimg2" width="64" height="64"/>
-        <image name="lauchimg3" width="140" height="87"/>
     </resources>
 </document>

@@ -11,6 +11,7 @@ import UIKit
 class DishTableViewController: UITableViewController {
     
     @IBOutlet weak var restaurantPhoto: UIImageView!
+    @IBOutlet weak var cartIcon: UIBarButtonItem!
     
     // MARK: dishes stored according to their types.
     var staple = [Dish]()
@@ -266,7 +267,7 @@ class DishTableViewController: UITableViewController {
         let headerView = UITableViewHeaderFooterView()
         
         // MARK: TO BE CHANGED!
-        headerView.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        // headerView.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
         
         return headerView
     }

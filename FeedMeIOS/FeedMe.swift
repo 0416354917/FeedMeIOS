@@ -23,6 +23,7 @@ struct FeedMe {
         static var images: [String: UIImage]?
         static var order: Order?
         static var dishes: [Int: Dish]!
+        static var selectedDeliveryAddress: Address!
     }
         
 }
