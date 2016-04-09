@@ -15,6 +15,10 @@ class AddressTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setBackground(self)
+        self.setBar(self)
+        
         loadAddresses()
     }
     
@@ -69,6 +73,13 @@ class AddressTableViewController: UITableViewController {
             address = otherDeliveryAddresses[indexPath.row]
         default:
             address = nil
+        }
+        
+        
+        if((indexPath.row)%2 == 0) {
+            cell.backgroundColor = FeedMe.transColor4
+        } else {
+            cell.backgroundColor = FeedMe.transColor7
         }
         
         // Configure the cell...

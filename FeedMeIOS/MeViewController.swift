@@ -16,6 +16,10 @@ class MeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setViewBackground(self)
+        self.setViewBar(self)
+        
 
         // Do any additional setup after loading the view.
     }
