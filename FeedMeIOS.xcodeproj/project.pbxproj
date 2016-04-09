@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		44308C491CA20DB8003E7BB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44308C481CA20DB8003E7BB4 /* Assets.xcassets */; };
+		7BEAF4C51CB8DB0300F1568B /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAF4C41CB8DB0300F1568B /* ViewControllerExtension.swift */; };
 		961606F21CB119930079183B /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 961606F11CB119930079183B /* LICENSE.txt */; };
 		961606F41CB11AD40079183B /* HistoryOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961606F31CB11AD40079183B /* HistoryOrders.swift */; };
 		961606F61CB11AF50079183B /* HistoryOrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961606F51CB11AF50079183B /* HistoryOrdersTableViewCell.swift */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		44308C481CA20DB8003E7BB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BEAF4C41CB8DB0300F1568B /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		961606F11CB119930079183B /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		961606F31CB11AD40079183B /* HistoryOrders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryOrders.swift; path = ../HistoryOrders.swift; sourceTree = "<group>"; };
 		961606F51CB11AF50079183B /* HistoryOrdersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryOrdersTableViewCell.swift; path = ../HistoryOrdersTableViewCell.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				96CFC4FA1C87FF2A0086F4EF /* AppDelegate.swift */,
 				96D5D88F1C9CD4CB0049FC9D /* FeedMe.swift */,
+				7BEAF4C41CB8DB0300F1568B /* ViewControllerExtension.swift */,
 				96EF930B1CA916B1002C6623 /* Address.swift */,
 				96EF93131CA91821002C6623 /* AddressTableViewCell.swift */,
 				96EF93151CA91831002C6623 /* AddressTableViewController.swift */,
@@ -387,6 +390,7 @@
 				96EF93141CA91821002C6623 /* AddressTableViewCell.swift in Sources */,
 				96D5D8901C9CD4CB0049FC9D /* FeedMe.swift in Sources */,
 				961C2E241CA6199500C562F8 /* OrderTableViewController.swift in Sources */,
+				7BEAF4C51CB8DB0300F1568B /* ViewControllerExtension.swift in Sources */,
 				96D5D89A1C9D009C0049FC9D /* DishTableViewController.swift in Sources */,
 				962C5CF01CAB7E010009CBF3 /* SSRadioButton.swift in Sources */,
 			);

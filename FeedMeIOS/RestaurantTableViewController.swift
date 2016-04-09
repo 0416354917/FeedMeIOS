@@ -20,35 +20,12 @@ class RestaurantTableViewController: UITableViewController {
         // Initialization:
         FeedMe.Variable.images = [String: UIImage]()
         
-        let bgImage = UIImage(named:"background.png")
-        let imageView = UIImageView(frame: self.view.bounds)
-        imageView.image = bgImage
-        
-        self.tableView.backgroundView = imageView
-        
-//        self.view.addSubview(imageView)
-//        self.view.sendSubviewToBack(imageView)
+        self.setBackground(self)
+        self.setBar(self)
 
         // Load the data:
         loadAllRestaurants(FeedMe.Path.TEXT_HOST + "restaurants/allRestaurant")
         
-        // Change the backgroud color of the navigation bar & tab bar:
-//        let logoImage = UIImageView(frame: CGRect(x:0, y:0, width: 80, height: 30))
-//        logoImage.contentMode = .ScaleAspectFit
-//        let nglogo = UIImage(named: "Logo.png")
-//        logoImage.image = nglogo
-//        self.navigationController?.navigationBar.topItem?.titleView = logoImage
-        
-        let nav = self.navigationController?.navigationBar
-        
-        nav?.tintColor = UIColor.whiteColor()
-        nav?.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
-        
-        let ngColor = UIColor(red: 203/255, green:41/225, blue: 10/255, alpha: 1)
-        nav?.backgroundColor = ngColor
-        nav?.barTintColor = ngColor
-        self.tabBarController?.tabBar.backgroundColor = ngColor
-        self.tabBarController?.tabBar.barTintColor = ngColor
     }
     
     func loadAllRestaurants(urlString: String) {
@@ -166,11 +143,13 @@ class RestaurantTableViewController: UITableViewController {
         cell.photoImageView.layer.borderWidth = 2.0
         cell.photoImageView.clipsToBounds = true
         if((indexPath.row)%2 == 0) {
-            cell.backgroundColor = UIColor(red: 255/225, green: 255/255, blue: 255/255, alpha: 0.4)
-            cell.photoImageView.layer.borderColor = UIColor(red: 255/225, green: 255/255, blue: 255/255, alpha: 0.4).CGColor
+            cell.backgroundColor = FeedMe.transColor4
+            cell.photoImageView.layer.borderColor = FeedMe.transColor4.CGColor
+            
+            
         } else {
-            cell.backgroundColor = UIColor(red: 255/225, green: 255/255, blue: 255/255, alpha: 0.7)
-            cell.photoImageView.layer.borderColor = UIColor(red: 255/225, green: 255/255, blue: 255/255, alpha: 0.7).CGColor
+            cell.backgroundColor = FeedMe.transColor7
+            cell.photoImageView.layer.borderColor = FeedMe.transColor7.CGColor
         }
         
         if restaurant.openTimeMorning != nil && restaurant.openTimeAfternoon != nil {

@@ -15,6 +15,9 @@ class HistoryOrdersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setBackground(self)
+        self.setBar(self)
+
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         if loadData() {
@@ -81,6 +84,12 @@ class HistoryOrdersTableViewController: UITableViewController {
             cell.OrderStateLabel.text = "Finished"
         default:
             break
+        }
+        
+        if((indexPath.row)%2 == 0) {
+            cell.backgroundColor = FeedMe.transColor4
+        } else {
+            cell.backgroundColor = FeedMe.transColor7
         }
         
         cell.GrandTotalLabel.text = String(order!.totalPrice)

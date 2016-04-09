@@ -26,6 +26,9 @@ class OrderTableViewController: UITableViewController, UIPopoverPresentationCont
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setBackground(self)
+        self.setBar(self)
+        
         if FeedMe.Variable.order != nil {
             totalPrice.text = "$" + String(format: "%.2f", FeedMe.Variable.order!.totalPrice)
         } else {
@@ -175,6 +178,12 @@ class OrderTableViewController: UITableViewController, UIPopoverPresentationCont
         cell.dishQtyLabel.text = String(FeedMe.Variable.order!.id2count[dish.ID]!)
         
         cell.tag = dish.ID
+        
+        if((indexPath.row)%2 == 0) {
+            cell.backgroundColor = FeedMe.transColor4
+        } else {
+            cell.backgroundColor = FeedMe.transColor7
+        }
 
         return cell
     }

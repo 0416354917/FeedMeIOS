@@ -29,10 +29,9 @@ class DishTableViewController: UITableViewController {
         FeedMe.Variable.order = Order(userID: FeedMe.Variable.userID, restaurantID: FeedMe.Variable.restaurantID!)
         FeedMe.Variable.dishes = [Int: Dish]()
         
-        let bgImage = UIImage(named: "background.png")
-        let imageView = UIImageView(frame: self.view.bounds)
-        imageView.image = bgImage
-        self.tableView.backgroundView = imageView
+        self.setBackground(self)
+        self.setBar(self)
+        
         navigationItem.title = FeedMe.Variable.restaurantName
         
         loadAllDishes(FeedMe.Path.TEXT_HOST + "dishes/query/?shopId=" + String(FeedMe.Variable.restaurantID!))
@@ -222,7 +221,7 @@ class DishTableViewController: UITableViewController {
         cell.photoImageView.layer.cornerRadius = 10.0
         cell.photoImageView.layer.borderWidth = 0.0
         cell.photoImageView.clipsToBounds = true
-        cell.backgroundColor = UIColor(red: 255/225, green: 255/255, blue: 255/255, alpha: 0.6)
+        cell.backgroundColor = FeedMe.transColor7
         
         return cell
     }

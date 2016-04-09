@@ -25,6 +25,10 @@ struct FeedMe {
         static var dishes: [Int: Dish]!
         static var selectedDeliveryAddress: Address!
     }
+    
+    static var transColor4 = UIColor(red: 255/225, green: 255/255, blue: 255/255, alpha: 0.4)
+    static var transColor7 = UIColor(red: 255/225, green: 255/255, blue: 255/255, alpha: 0.7)
+    
         
 }
 
