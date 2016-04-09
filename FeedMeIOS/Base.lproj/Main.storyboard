@@ -181,7 +181,7 @@
         <!--Login-->
         <scene sceneID="9ad-eg-fya">
             <objects>
-                <viewController id="ZhQ-1L-nlM" sceneMemberID="viewController">
+                <viewController id="ZhQ-1L-nlM" customClass="LoginViewController" customModule="FeedMeIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SYu-5c-TZh"/>
                         <viewControllerLayoutGuide type="bottom" id="khY-gZ-FUp"/>
@@ -215,6 +215,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInButtonClicked:" destination="ZhQ-1L-nlM" eventType="touchUpInside" id="0ob-QY-OX4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fe-lI-KjA">
                                 <rect key="frame" x="68" y="329" width="184" height="30"/>
@@ -242,6 +245,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="Gar-GA-dc1"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="uZz-Kl-8xo" id="2BM-V5-nP1"/>
+                        <outlet property="usernameTextField" destination="8wp-PC-O92" id="kcu-KM-2ef"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bk2-kg-YjU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
