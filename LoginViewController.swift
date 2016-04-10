@@ -26,14 +26,16 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInButtonClicked(sender: UIButton) {
-        let verifyResult = verifyUser(usernameTextField.text, inputPassword: passwordTextField.text)
+        // MARK: TODO!
+        verifyUser(usernameTextField.text, inputPassword: passwordTextField.text)
         print(usernameTextField.text, " ", passwordTextField.text)
     }
     
     func verifyUser(inputUsername: String?, inputPassword: String?) -> Bool {
-        
+        // MARK: TODO!
         return false
     }
+    
 
     /*
     // MARK: - Navigation
