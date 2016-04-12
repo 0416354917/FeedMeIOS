@@ -27,11 +27,13 @@
 		964137061CABED9D0028C158 /* NewAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964137051CABED9D0028C158 /* NewAddressViewController.swift */; };
 		9667F6111CB694C3001AC6FF /* RetrievePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667F6101CB694C3001AC6FF /* RetrievePasswordViewController.swift */; };
 		967C825A1CB8C5D5006ED941 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C82591CB8C5D5006ED941 /* LoginViewController.swift */; };
-		9687A6241CB3C18600A0CCF5 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9687A6231CB3C18600A0CCF5 /* MeViewController.swift */; };
+		9687A6241CB3C18600A0CCF5 /* SignInUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9687A6231CB3C18600A0CCF5 /* SignInUpViewController.swift */; };
 		96A855121CA4F1B900B275AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A855111CA4F1B900B275AC /* background.png */; };
 		96C47DC31CBB47680003984D /* UserSettingsParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DC21CBB47680003984D /* UserSettingsParameters.swift */; };
 		96C47DC51CBB492D0003984D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DC41CBB492D0003984D /* SignUpViewController.swift */; };
 		96C47DC81CBB51400003984D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DC71CBB51400003984D /* StringExtension.swift */; };
+		96C47DCA1CBB774E0003984D /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DC91CBB774E0003984D /* MeTableViewController.swift */; };
+		96C47DCC1CBB9CD90003984D /* MeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DCB1CBB9CD90003984D /* MeTableViewCell.swift */; };
 		96CFC4FB1C87FF2A0086F4EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CFC4FA1C87FF2A0086F4EF /* AppDelegate.swift */; };
 		96CFC5001C87FF2A0086F4EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CFC4FE1C87FF2A0086F4EF /* Main.storyboard */; };
 		96CFC5051C87FF2A0086F4EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CFC5031C87FF2A0086F4EF /* LaunchScreen.storyboard */; };
@@ -86,11 +88,13 @@
 		964137051CABED9D0028C158 /* NewAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewAddressViewController.swift; path = FeedMeIOS/NewAddressViewController.swift; sourceTree = "<group>"; };
 		9667F6101CB694C3001AC6FF /* RetrievePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RetrievePasswordViewController.swift; path = FeedMeIOS/RetrievePasswordViewController.swift; sourceTree = "<group>"; };
 		967C82591CB8C5D5006ED941 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		9687A6231CB3C18600A0CCF5 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeViewController.swift; path = FeedMeIOS/MeViewController.swift; sourceTree = "<group>"; };
+		9687A6231CB3C18600A0CCF5 /* SignInUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInUpViewController.swift; path = FeedMeIOS/SignInUpViewController.swift; sourceTree = "<group>"; };
 		96A855111CA4F1B900B275AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		96C47DC21CBB47680003984D /* UserSettingsParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingsParameters.swift; sourceTree = "<group>"; };
 		96C47DC41CBB492D0003984D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		96C47DC71CBB51400003984D /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		96C47DC91CBB774E0003984D /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewController.swift; sourceTree = "<group>"; };
+		96C47DCB1CBB9CD90003984D /* MeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewCell.swift; sourceTree = "<group>"; };
 		96CFC4F71C87FF2A0086F4EF /* FeedMeIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedMeIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CFC4FA1C87FF2A0086F4EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96CFC4FF1C87FF2A0086F4EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -193,10 +197,12 @@
 			isa = PBXGroup;
 			children = (
 				96EF93071CA90391002C6623 /* User.swift */,
-				9687A6231CB3C18600A0CCF5 /* MeViewController.swift */,
+				96C47DCB1CBB9CD90003984D /* MeTableViewCell.swift */,
+				96C47DC91CBB774E0003984D /* MeTableViewController.swift */,
+				9687A6231CB3C18600A0CCF5 /* SignInUpViewController.swift */,
+				96C47DC41CBB492D0003984D /* SignUpViewController.swift */,
 				967C82591CB8C5D5006ED941 /* LoginViewController.swift */,
 				9667F6101CB694C3001AC6FF /* RetrievePasswordViewController.swift */,
-				96C47DC41CBB492D0003984D /* SignUpViewController.swift */,
 			);
 			name = Me;
 			sourceTree = "<group>";
@@ -414,7 +420,8 @@
 				961606F81CB11B100079183B /* HistoryOrdersTableViewController.swift in Sources */,
 				962C5CF11CAB7E010009CBF3 /* SSRadioButtonsController.swift in Sources */,
 				963C16AD1C98FFEC006C534E /* RestaurantTableViewCell.swift in Sources */,
-				9687A6241CB3C18600A0CCF5 /* MeViewController.swift in Sources */,
+				9687A6241CB3C18600A0CCF5 /* SignInUpViewController.swift in Sources */,
+				96C47DCA1CBB774E0003984D /* MeTableViewController.swift in Sources */,
 				964137061CABED9D0028C158 /* NewAddressViewController.swift in Sources */,
 				96C47DC81CBB51400003984D /* StringExtension.swift in Sources */,
 				96F673DE1CA54F25003F8D82 /* Order.swift in Sources */,
@@ -425,6 +432,7 @@
 				961C2E221CA6197700C562F8 /* OrderTableViewCell.swift in Sources */,
 				96CFC4FB1C87FF2A0086F4EF /* AppDelegate.swift in Sources */,
 				96C47DC31CBB47680003984D /* UserSettingsParameters.swift in Sources */,
+				96C47DCC1CBB9CD90003984D /* MeTableViewCell.swift in Sources */,
 				96EF93081CA90391002C6623 /* User.swift in Sources */,
 				96EF93141CA91821002C6623 /* AddressTableViewCell.swift in Sources */,
 				96C47DC51CBB492D0003984D /* SignUpViewController.swift in Sources */,

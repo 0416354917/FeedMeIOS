@@ -25,6 +25,11 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func closeButtonClicked(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     @IBAction func signInButtonClicked(sender: UIButton) {
         // MARK: TODO!
         verifyUser(usernameTextField.text, inputPassword: passwordTextField.text)

@@ -24,6 +24,7 @@ struct FeedMe {
         static var order: Order?
         static var dishes: [Int: Dish]!
         static var selectedDeliveryAddress: Address!
+        static var userInLoginState: Bool = false
     }
     
     static var transColor4 = UIColor(red: 255/225, green: 255/255, blue: 255/255, alpha: 0.4)

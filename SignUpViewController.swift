@@ -32,6 +32,9 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func cancelButtonClicked(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
     func displayMessage(validationResult: (statusCode: Int, description: String)) {
         let alert = UIAlertController(title: "Message", message: validationResult.description, preferredStyle: UIAlertControllerStyle.Alert)
