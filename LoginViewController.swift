@@ -43,24 +43,63 @@ class LoginViewController: UIViewController {
     @IBAction func signInButtonClicked(sender: UIButton) {
         NSLog("username: %@, password: %@", usernameTextField.text!, passwordTextField.text!)
         
-        let verifyUserResult = verifyUser(usernameTextField.text, inputPassword: passwordTextField.text)
+        let verifyUserLoginResult = verifyUserLogin(usernameTextField.text, inputPassword: passwordTextField.text)
         
-        if verifyUserResult == false {
+        if verifyUserLoginResult.statusCode == 0 {
             usernameTextField.text = ""
             passwordTextField.text = ""
             usernameTextField.becomeFirstResponder()
             
-            displayMessage("Wrong username or password. Try again.")
+            displayMessage(verifyUserLoginResult.description)
         } else {
             dismissViewControllerAnimated(true, completion: nil)
         }
     }
     
-    func verifyUser(inputUsername: String?, inputPassword: String?) -> Bool {
-        // MARK: TODO HTTP POST.
+    func verifyUsername(inputUsername: String?) -> (statusCode: Int, description: String) {
+        var statusCode = 0
+        var description = "Invalid username. Username does not exist."
         
-        return false
+        // MARK: TODO HTTP POST (use main thread).
+        // if username exists, return (statusCode = 1, description = password).
+        
+        return (statusCode, description)
     }
+    
+    func verifyUserLogin(inputUsername: String?, inputPassword: String?) -> (statusCode: Int, description: String) {
+        var statusCode = 0
+        var description = ""
+        
+        // (1) verify username:
+        let verifyUsernameResult = verifyUsername(inputUsername)
+        if verifyUsernameResult.statusCode == 0 {
+            usernameTextField.text = ""
+            passwordTextField.text = ""
+            usernameTextField.becomeFirstResponder()
+            
+            statusCode = 0
+            description = verifyUsernameResult.description
+        }
+        
+        // (2) verify password:
+        else if passwordTextField.text! != verifyUsernameResult.description{
+            passwordTextField.text = ""
+            usernameTextField.becomeFirstResponder()
+            
+            statusCode = 0
+            description = "Wrong username or wrong password. Try again."
+        } else {
+            statusCode = 1
+            description = ""
+        }
+        
+        return (statusCode, description)
+    }
+    
+    @IBAction func forgetPasswordButtonClicked(sender: UIButton) {
+        
+    }
+    
     
 
     /*

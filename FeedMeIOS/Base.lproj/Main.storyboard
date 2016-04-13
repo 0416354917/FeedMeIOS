@@ -292,6 +292,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="forgetPasswordButtonClicked:" destination="ZhQ-1L-nlM" eventType="touchUpInside" id="UOp-up-y7c"/>
                                     <segue destination="CAh-6Y-QQ1" kind="push" id="wDL-lo-aFQ"/>
                                 </connections>
                             </button>
