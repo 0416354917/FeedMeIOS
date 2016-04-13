@@ -25,19 +25,40 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func displayMessage(message: String) {
+        let alert = UIAlertController(title: "Message", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+        
+        alert.addAction(okAction)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
     @IBAction func closeButtonClicked(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    
     @IBAction func signInButtonClicked(sender: UIButton) {
-        // MARK: TODO!
-        verifyUser(usernameTextField.text, inputPassword: passwordTextField.text)
-        print(usernameTextField.text, " ", passwordTextField.text)
+        NSLog("username: %@, password: %@", usernameTextField.text!, passwordTextField.text!)
+        
+        let verifyUserResult = verifyUser(usernameTextField.text, inputPassword: passwordTextField.text)
+        
+        if verifyUserResult == false {
+            usernameTextField.text = ""
+            passwordTextField.text = ""
+            usernameTextField.becomeFirstResponder()
+            
+            displayMessage("Wrong username or password. Try again.")
+        } else {
+            dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
     func verifyUser(inputUsername: String?, inputPassword: String?) -> Bool {
-        // MARK: TODO!
+        // MARK: TODO HTTP POST.
+        
         return false
     }
     
