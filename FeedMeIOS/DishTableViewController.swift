@@ -14,7 +14,7 @@ class DishTableViewController: UITableViewController {
     @IBOutlet weak var cartIcon: UIBarButtonItem!
     
     // MARK: dishes stored according to their types.
-    var staple = [Dish]()
+    var entree = [Dish]()
     var soup = [Dish]()
     var dessert = [Dish]()
     var drinks = [Dish]()
@@ -108,8 +108,8 @@ class DishTableViewController: UITableViewController {
                     FeedMe.Variable.dishes[dish.ID] = dish
                     
                     switch dish.type! {
-                    case DishType.Staple.rawValue:
-                        staple += [dish]
+                    case DishType.Entree.rawValue:
+                        entree += [dish]
                     case DishType.Soup.rawValue:
                         soup += [dish]
                     case DishType.Dessert.rawValue:
@@ -123,7 +123,7 @@ class DishTableViewController: UITableViewController {
                 }
             }
             
-            staple.sortInPlace({$0.name! < $1.name!})
+            entree.sortInPlace({$0.name! < $1.name!})
             soup.sortInPlace({$0.name! < $1.name!})
             dessert.sortInPlace({$0.name! < $1.name!})
             drinks.sortInPlace({$0.name! < $1.name!})
@@ -173,7 +173,7 @@ class DishTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return staple.count
+            return entree.count
         case 1:
             return soup.count
         case 2:
@@ -194,7 +194,7 @@ class DishTableViewController: UITableViewController {
         var dish: Dish!
         switch indexPath.section {
         case 0:
-            dish = staple[indexPath.row]
+            dish = entree[indexPath.row]
         case 1:
             dish = soup[indexPath.row]
         case 2:
@@ -229,7 +229,7 @@ class DishTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.section {
         case 0:
-            FeedMe.Variable.dishID = staple[indexPath.row].ID
+            FeedMe.Variable.dishID = entree[indexPath.row].ID
         case 1:
             FeedMe.Variable.dishID = soup[indexPath.row].ID
         case 2:
@@ -246,7 +246,7 @@ class DishTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return DishType.Staple.rawValue + " ( " + String(staple.count) + " )"
+            return DishType.Entree.rawValue + " ( " + String(entree.count) + " )"
         case 1:
             return DishType.Soup.rawValue + " ( " + String(soup.count) + " )"
         case 2:

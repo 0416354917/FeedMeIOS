@@ -33,7 +33,7 @@ struct FeedMe {
 }
 
 enum DishType: String {
-    case Staple = "Staple"
+    case Entree = "Entree"
     case Soup = "Soup"
     case Dessert = "Dessert"
     case Drinks = "Drinks"

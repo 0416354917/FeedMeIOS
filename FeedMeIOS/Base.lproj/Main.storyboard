@@ -1096,6 +1096,7 @@
                                     <outlet property="OrderDateLabel" destination="ezb-ua-OLW" id="b2w-U1-Bff"/>
                                     <outlet property="OrderStateLabel" destination="YDM-bQ-UNz" id="rVC-rb-ufM"/>
                                     <outlet property="RestaurantLabel" destination="vTq-un-l62" id="44s-6g-6n4"/>
+                                    <segue destination="u8I-ps-68a" kind="push" id="Gx8-11-I0d"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1121,6 +1122,50 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-898" y="-1583"/>
+        </scene>
+        <!--Tracking Order Table View Controller-->
+        <scene sceneID="rjD-Dr-2N0">
+            <objects>
+                <tableViewController id="u8I-ps-68a" customClass="TrackingOrderTableViewController" customModule="FeedMeIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tec-3X-P0f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="zGl-T6-ha6">
+                            <rect key="frame" x="0.0" y="136" width="320" height="382"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkL-Ow-ICs">
+                                    <rect key="frame" x="73" y="231" width="175" height="30"/>
+                                    <state key="normal" title="Tracking Order"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6j-2u-MTC">
+                                    <rect key="frame" x="73" y="311" width="175" height="30"/>
+                                    <state key="normal" title="Contact Restaurant"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZcS-8C-BOQ" customClass="TrackingOrderTableViewCell" customModule="FeedMeIOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZcS-8C-BOQ" id="Jmt-kd-Mv0">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u8I-ps-68a" id="AMj-Fa-urK"/>
+                            <outlet property="delegate" destination="u8I-ps-68a" id="gyl-Zj-pKB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="VOi-yx-e8d"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVq-FO-HK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-431" y="-1583"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U94-J5-L3V">
