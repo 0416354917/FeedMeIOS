@@ -31,7 +31,7 @@ class HistoryOrdersTableViewController: UITableViewController {
     }
     
     // MARK: - Load data source
-    
+    // TODO: HTTP GET
     func loadData() -> Bool {
         var currentOrders:[Order]? = [Order]()
         let curOrder1 = Order(userID: FeedMe.Variable.userID, restaurantID: 1)
@@ -110,26 +110,34 @@ class HistoryOrdersTableViewController: UITableViewController {
     }
     
     
-
-    /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
-        return true
+        switch indexPath.section {
+        case 0:
+            return false
+        case 1:
+            return true
+        default:
+            false
+        }
+        
+        return false
     }
-    */
 
-    /*
+
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
+            historyOrders!.delete("HISTORY", index: indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            
+            // Update header information of the history orders section
+            tableView.reloadSections(NSIndexSet(index: 1), withRowAnimation: UITableViewRowAnimation.None)
+        }
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

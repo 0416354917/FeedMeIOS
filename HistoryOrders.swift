@@ -38,4 +38,12 @@ class HistoryOrders {
         return self.pastOrders
     }
     
+    func delete(orderType: String, index: Int) {
+        if orderType == "CURRENT" {
+            self.currentOrders!.removeAtIndex(index)
+        } else if orderType == "HISTORY"{
+            self.pastOrders!.removeAtIndex(index)
+        }
+    }
+    
 }
