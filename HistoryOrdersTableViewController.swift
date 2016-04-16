@@ -34,7 +34,6 @@ class HistoryOrdersTableViewController: UITableViewController {
     
     func loadData() -> Bool {
         var currentOrders:[Order]? = [Order]()
-        
         let curOrder1 = Order(userID: FeedMe.Variable.userID, restaurantID: 1)
         curOrder1.totalPrice = 100
         curOrder1.setTime()
@@ -92,7 +91,7 @@ class HistoryOrdersTableViewController: UITableViewController {
             cell.backgroundColor = FeedMe.transColor7
         }
         
-        cell.GrandTotalLabel.text = String(order!.totalPrice)
+        cell.GrandTotalLabel.text = "$\(order!.totalPrice)"
         cell.OrderDateLabel.text = order!.orderTime!
         
 
