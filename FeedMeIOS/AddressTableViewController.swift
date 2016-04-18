@@ -18,8 +18,11 @@ class AddressTableViewController: UITableViewController {
         
         self.setBackground(self)
         self.setBar(self)
-        
-        loadAddresses()
+        if Reachability.isConnectedToNetwork() {
+            loadAddresses()
+        } else {
+            Reachability.alertNoInternetConnection(self)
+        }
     }
     
     /**

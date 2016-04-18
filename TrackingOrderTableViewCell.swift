@@ -10,6 +10,11 @@ import UIKit
 
 class TrackingOrderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var dishNameLabel: UILabel!
+    @IBOutlet weak var dishUnitPriceLabel: UILabel!
+    @IBOutlet weak var dishQtyLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -18,6 +18,11 @@ class TrackingOrderTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        if Reachability.isConnectedToNetwork() {
+            
+        } else {
+            Reachability.alertNoInternetConnection(self)
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -20,8 +20,10 @@ class HistoryOrdersTableViewController: UITableViewController {
 
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        if loadData() {
-            print("Order history is not mepty!")
+        if Reachability.isConnectedToNetwork() {
+            self.loadData()
+        } else {
+            Reachability.alertNoInternetConnection(self)
         }
     }
 

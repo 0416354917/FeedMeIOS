@@ -34,7 +34,11 @@ class DishTableViewController: UITableViewController {
         
         navigationItem.title = FeedMe.Variable.restaurantName
         
-        loadAllDishes(FeedMe.Path.TEXT_HOST + "dishes/query/?shopId=" + String(FeedMe.Variable.restaurantID!))
+        if Reachability.isConnectedToNetwork() {
+            loadAllDishes(FeedMe.Path.TEXT_HOST + "dishes/query/?shopId=" + String(FeedMe.Variable.restaurantID!))
+        } else {
+            Reachability.alertNoInternetConnection(self)
+        }
     }
     
     @IBAction func backToRestList(sender: UIBarButtonItem) {

@@ -27,6 +27,7 @@
 		964137061CABED9D0028C158 /* NewAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964137051CABED9D0028C158 /* NewAddressViewController.swift */; };
 		9644CE8D1CC0FC7700260498 /* TrackingOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9644CE8C1CC0FC7700260498 /* TrackingOrderTableViewCell.swift */; };
 		9644CE8F1CC0FC8E00260498 /* TrackingOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9644CE8E1CC0FC8E00260498 /* TrackingOrderTableViewController.swift */; };
+		965D9E271CC4F7B100609944 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965D9E261CC4F7B100609944 /* Reachability.swift */; };
 		9667F6111CB694C3001AC6FF /* RetrievePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667F6101CB694C3001AC6FF /* RetrievePasswordViewController.swift */; };
 		967C825A1CB8C5D5006ED941 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C82591CB8C5D5006ED941 /* LoginViewController.swift */; };
 		9687A6241CB3C18600A0CCF5 /* SignInUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9687A6231CB3C18600A0CCF5 /* SignInUpViewController.swift */; };
@@ -90,6 +91,7 @@
 		964137051CABED9D0028C158 /* NewAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewAddressViewController.swift; path = FeedMeIOS/NewAddressViewController.swift; sourceTree = "<group>"; };
 		9644CE8C1CC0FC7700260498 /* TrackingOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingOrderTableViewCell.swift; sourceTree = "<group>"; };
 		9644CE8E1CC0FC8E00260498 /* TrackingOrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingOrderTableViewController.swift; sourceTree = "<group>"; };
+		965D9E261CC4F7B100609944 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9667F6101CB694C3001AC6FF /* RetrievePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RetrievePasswordViewController.swift; path = FeedMeIOS/RetrievePasswordViewController.swift; sourceTree = "<group>"; };
 		967C82591CB8C5D5006ED941 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9687A6231CB3C18600A0CCF5 /* SignInUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInUpViewController.swift; path = FeedMeIOS/SignInUpViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				96CFC4FA1C87FF2A0086F4EF /* AppDelegate.swift */,
+				965D9E261CC4F7B100609944 /* Reachability.swift */,
 				96D5D88F1C9CD4CB0049FC9D /* FeedMe.swift */,
 				96C47DC21CBB47680003984D /* UserSettingsParameters.swift */,
 				44308C481CA20DB8003E7BB4 /* Assets.xcassets */,
@@ -422,6 +425,7 @@
 				961606F61CB11AF50079183B /* HistoryOrdersTableViewCell.swift in Sources */,
 				961606F41CB11AD40079183B /* HistoryOrders.swift in Sources */,
 				963C16B11C9905AB006C534E /* Restaurant.swift in Sources */,
+				965D9E271CC4F7B100609944 /* Reachability.swift in Sources */,
 				96EF930C1CA916B1002C6623 /* Address.swift in Sources */,
 				961606F81CB11B100079183B /* HistoryOrdersTableViewController.swift in Sources */,
 				962C5CF11CAB7E010009CBF3 /* SSRadioButtonsController.swift in Sources */,

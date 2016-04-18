@@ -39,8 +39,12 @@ class OrderTableViewController: UITableViewController, UIPopoverPresentationCont
         FeedMe.Variable.selectedDeliveryAddress.setAsSelected()
         deliveryAddressLabel.text = FeedMe.Variable.selectedDeliveryAddress.toSimpleAddressString()
         updateGrandTotalFee()
-    
-        loadAddresses()
+        
+        if Reachability.isConnectedToNetwork() {
+            loadAddresses()
+        } else {
+            Reachability.alertNoInternetConnection(self)
+        }
         // configureRadioButtonView(addressSelectionView)
     }
     

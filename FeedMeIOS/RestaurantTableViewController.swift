@@ -24,7 +24,11 @@ class RestaurantTableViewController: UITableViewController {
         self.setBar(self)
 
         // Load the data:
-        loadAllRestaurants(FeedMe.Path.TEXT_HOST + "restaurants/allRestaurant")
+        if Reachability.isConnectedToNetwork() {
+            loadAllRestaurants(FeedMe.Path.TEXT_HOST + "restaurants/allRestaurant")
+        } else {
+            Reachability.alertNoInternetConnection(self)
+        }
         
     }
     
