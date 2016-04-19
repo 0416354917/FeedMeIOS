@@ -8,7 +8,8 @@
 
 import UIKit
 
-class TrackingOrderTableViewController: UITableViewController {
+class OrderDetailTableViewController: UITableViewController {
+    var dishes: [Dish]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +19,9 @@ class TrackingOrderTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
         if Reachability.isConnectedToNetwork() {
-            
+            self.dishes = FeedMe.Variable.order!.dishesList()
         } else {
             Reachability.alertNoInternetConnection(self)
         }
@@ -29,28 +31,39 @@ class TrackingOrderTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func ContactRestaurantButtonClicked(sender: UIButton) {
+        let phone = 0416354917
+        if let url = NSURL(string: "tel://\(phone)") {
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
+    
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.dishes.count
     }
-
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cellIdentifier = "OrderDetailTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! OrderDetailTableViewCell
 
         // Configure the cell...
+        let dish = self.dishes[indexPath.row]
+        cell.dishNameLabel.text = dish.name
+        cell.dishUnitPriceLabel.text = String(dish.price)
+        cell.dishQtyLabel.text = String(FeedMe.Variable.order!.dishQty(dish))
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

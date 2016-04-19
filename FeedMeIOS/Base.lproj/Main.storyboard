@@ -1127,7 +1127,7 @@
         <!--Detail-->
         <scene sceneID="rjD-Dr-2N0">
             <objects>
-                <tableViewController id="u8I-ps-68a" customClass="TrackingOrderTableViewController" customModule="FeedMeIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="u8I-ps-68a" customClass="OrderDetailTableViewController" customModule="FeedMeIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tec-3X-P0f">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1138,11 +1138,19 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkL-Ow-ICs">
                                     <rect key="frame" x="73" y="226" width="175" height="30"/>
+                                    <color key="backgroundColor" red="0.026156651789999999" green="0.78487646069999994" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <state key="normal" title="Tracking Order"/>
+                                    <connections>
+                                        <segue destination="BgK-WT-K9E" kind="push" id="bI2-ml-Jp6"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6j-2u-MTC">
                                     <rect key="frame" x="73" y="295" width="175" height="30"/>
+                                    <color key="backgroundColor" red="1" green="0.18575742549999999" blue="0.1746065812" alpha="0.65649933510000003" colorSpace="calibratedRGB"/>
                                     <state key="normal" title="Contact Restaurant"/>
+                                    <connections>
+                                        <action selector="ContactRestaurantButtonClicked:" destination="u8I-ps-68a" eventType="touchUpInside" id="wCt-1c-bgi"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="restaurant name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GF1-ip-mnG">
                                     <rect key="frame" x="8" y="8" width="125" height="21"/>
@@ -1178,7 +1186,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="40" id="ZcS-8C-BOQ" customClass="TrackingOrderTableViewCell" customModule="FeedMeIOS" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderDetailTableViewCell" rowHeight="40" id="ZcS-8C-BOQ" customClass="OrderDetailTableViewCell" customModule="FeedMeIOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZcS-8C-BOQ" id="Jmt-kd-Mv0">
@@ -1224,6 +1232,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVq-FO-HK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-431" y="-1583"/>
+        </scene>
+        <!--Tracking Order-->
+        <scene sceneID="zZS-Jz-fCF">
+            <objects>
+                <viewController id="BgK-WT-K9E" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Aj-t1-F9s"/>
+                        <viewControllerLayoutGuide type="bottom" id="Usw-6Z-O2U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="69j-mj-b5X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tracking Order" id="NCJ-lD-zpv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frX-TZ-ESD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24" y="-1583"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U94-J5-L3V">

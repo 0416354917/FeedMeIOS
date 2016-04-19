@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TrackingOrderTableViewCell: UITableViewCell {
+class OrderDetailTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dishNameLabel: UILabel!
     @IBOutlet weak var dishUnitPriceLabel: UILabel!

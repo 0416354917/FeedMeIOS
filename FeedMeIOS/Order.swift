@@ -97,13 +97,23 @@ class Order {
         return self.totalPrice == 0
     }
     
-    // Return the list of all dishes.
+    // Get the number of dishes group by dish.
+    func count() -> Int {
+        return self.id2count.count
+    }
+    
+    // Get the list of all dishes.
     func dishesList() -> [Dish] {
         var dishesList = [Dish]()
         for (_, dish) in id2dish {
             dishesList += [dish]
         }
         return dishesList
+    }
+    
+    // Get the Qty of a dish: Dish.
+    func dishQty(dish: Dish) -> Int {
+        return self.id2count[dish.ID]!
     }
 
 }

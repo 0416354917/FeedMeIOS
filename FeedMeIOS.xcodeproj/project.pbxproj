@@ -25,8 +25,8 @@
 		963C16B21C9905AB006C534E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C16B01C9905AB006C534E /* Restaurant.swift */; };
 		963C16B31C9905AB006C534E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C16B01C9905AB006C534E /* Restaurant.swift */; };
 		964137061CABED9D0028C158 /* NewAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964137051CABED9D0028C158 /* NewAddressViewController.swift */; };
-		9644CE8D1CC0FC7700260498 /* TrackingOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9644CE8C1CC0FC7700260498 /* TrackingOrderTableViewCell.swift */; };
-		9644CE8F1CC0FC8E00260498 /* TrackingOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9644CE8E1CC0FC8E00260498 /* TrackingOrderTableViewController.swift */; };
+		9644CE8D1CC0FC7700260498 /* OrderDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9644CE8C1CC0FC7700260498 /* OrderDetailTableViewCell.swift */; };
+		9644CE8F1CC0FC8E00260498 /* OrderDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9644CE8E1CC0FC8E00260498 /* OrderDetailTableViewController.swift */; };
 		965D9E271CC4F7B100609944 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965D9E261CC4F7B100609944 /* Reachability.swift */; };
 		9667F6111CB694C3001AC6FF /* RetrievePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667F6101CB694C3001AC6FF /* RetrievePasswordViewController.swift */; };
 		967C825A1CB8C5D5006ED941 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C82591CB8C5D5006ED941 /* LoginViewController.swift */; };
@@ -89,8 +89,8 @@
 		963C16AE1C9904CE006C534E /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantTableViewController.swift; path = FeedMeIOS/RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		963C16B01C9905AB006C534E /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = FeedMeIOS/Restaurant.swift; sourceTree = "<group>"; };
 		964137051CABED9D0028C158 /* NewAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewAddressViewController.swift; path = FeedMeIOS/NewAddressViewController.swift; sourceTree = "<group>"; };
-		9644CE8C1CC0FC7700260498 /* TrackingOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingOrderTableViewCell.swift; sourceTree = "<group>"; };
-		9644CE8E1CC0FC8E00260498 /* TrackingOrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingOrderTableViewController.swift; sourceTree = "<group>"; };
+		9644CE8C1CC0FC7700260498 /* OrderDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailTableViewCell.swift; sourceTree = "<group>"; };
+		9644CE8E1CC0FC8E00260498 /* OrderDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailTableViewController.swift; sourceTree = "<group>"; };
 		965D9E261CC4F7B100609944 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9667F6101CB694C3001AC6FF /* RetrievePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RetrievePasswordViewController.swift; path = FeedMeIOS/RetrievePasswordViewController.swift; sourceTree = "<group>"; };
 		967C82591CB8C5D5006ED941 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -175,8 +175,8 @@
 				961606F31CB11AD40079183B /* HistoryOrders.swift */,
 				961606F51CB11AF50079183B /* HistoryOrdersTableViewCell.swift */,
 				961606F71CB11B100079183B /* HistoryOrdersTableViewController.swift */,
-				9644CE8C1CC0FC7700260498 /* TrackingOrderTableViewCell.swift */,
-				9644CE8E1CC0FC8E00260498 /* TrackingOrderTableViewController.swift */,
+				9644CE8C1CC0FC7700260498 /* OrderDetailTableViewCell.swift */,
+				9644CE8E1CC0FC8E00260498 /* OrderDetailTableViewController.swift */,
 			);
 			name = Orders;
 			sourceTree = "<group>";
@@ -446,8 +446,8 @@
 				96EF93081CA90391002C6623 /* User.swift in Sources */,
 				96EF93141CA91821002C6623 /* AddressTableViewCell.swift in Sources */,
 				96C47DC51CBB492D0003984D /* SignUpViewController.swift in Sources */,
-				9644CE8D1CC0FC7700260498 /* TrackingOrderTableViewCell.swift in Sources */,
-				9644CE8F1CC0FC8E00260498 /* TrackingOrderTableViewController.swift in Sources */,
+				9644CE8D1CC0FC7700260498 /* OrderDetailTableViewCell.swift in Sources */,
+				9644CE8F1CC0FC8E00260498 /* OrderDetailTableViewController.swift in Sources */,
 				96D5D8901C9CD4CB0049FC9D /* FeedMe.swift in Sources */,
 				961C2E241CA6199500C562F8 /* OrderTableViewController.swift in Sources */,
 				7BEAF4C51CB8DB0300F1568B /* ViewControllerExtension.swift in Sources */,
