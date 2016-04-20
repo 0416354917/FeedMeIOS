@@ -982,11 +982,11 @@
             </objects>
             <point key="canvasLocation" x="19" y="574"/>
         </scene>
-        <!--Explore-->
+        <!--Home-->
         <scene sceneID="tuw-dC-J1X">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FGg-hX-eLr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explore" image="ic_explore" id="OQV-K7-Pgg"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="OQV-K7-Pgg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Yf-yq-cM8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1009,7 +1009,7 @@
         <scene sceneID="9i5-YW-v6d">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bqO-G9-eLe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Orders" image="ic_list" id="y1a-Kg-AHk"/>
+                    <tabBarItem key="tabBarItem" title="Orders" image="order" id="y1a-Kg-AHk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jnx-uQ-bYR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1274,7 +1274,7 @@
         <scene sceneID="pHJ-X5-8Ae">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TnK-2N-R1K" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Me" image="ic_account_box" id="tai-lu-Dev"/>
+                    <tabBarItem key="tabBarItem" title="Me" image="profile" id="tai-lu-Dev"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cqu-wi-YuH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1309,12 +1309,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_account_box" width="24" height="24"/>
+        <image name="home" width="25" height="25"/>
         <image name="ic_close" width="24" height="24"/>
-        <image name="ic_explore" width="24" height="24"/>
-        <image name="ic_list" width="24" height="24"/>
         <image name="ic_navigate_before" width="24" height="24"/>
         <image name="logo_red" width="1167" height="290"/>
+        <image name="order" width="25" height="25"/>
+        <image name="profile" width="25" height="25"/>
         <image name="shopping_cart" width="24" height="24"/>
     </resources>
 </document>

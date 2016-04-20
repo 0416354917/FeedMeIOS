@@ -89,7 +89,7 @@ class RestaurantTableViewController: UITableViewController {
             
             do_table_refresh()
         } catch _ {
-            
+            Reachability.alertNoInternetConnection(self)
         }
     }
     
