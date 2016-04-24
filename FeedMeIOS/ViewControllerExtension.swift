@@ -10,10 +10,10 @@ import Foundation
 
 extension UITableViewController{
     func setBackground(viewController:UITableViewController){
-        let bgImage = UIImage(named:"background.png")
-        let imageView = UIImageView(frame: viewController.view.bounds)
-        imageView.image = bgImage
-        viewController.tableView.backgroundView = imageView
+//        let bgImage = UIImage(named:"background.png")
+//        let imageView = UIImageView(frame: viewController.view.bounds)
+//        imageView.image = bgImage
+//        viewController.tableView.backgroundView = imageView
         
     }
     func setBar(viewTableController:UITableViewController){
@@ -36,7 +36,7 @@ extension UIViewController{
 //        let imageView = UIImageView(frame: viewController.view.bounds)
 //        imageView.image = bgImage
         
-        viewController.view.backgroundColor = UIColor(patternImage: UIImage(named:"background.png")!)
+//        viewController.view.backgroundColor = UIColor(patternImage: UIImage(named:"background.png")!)
     }
     func setViewBar(viewController:UIViewController){
         let nav = viewController.navigationController?.navigationBar
