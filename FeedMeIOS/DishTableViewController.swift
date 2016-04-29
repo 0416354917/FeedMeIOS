@@ -35,6 +35,7 @@ class DishTableViewController: UITableViewController {
         navigationItem.title = FeedMe.Variable.restaurantName
         
         if Reachability.isConnectedToNetwork() {
+            print(String(FeedMe.Variable.restaurantID!))
             loadAllDishes(FeedMe.Path.TEXT_HOST + "dishes/query/?shopId=" + String(FeedMe.Variable.restaurantID!))
         } else {
             Reachability.alertNoInternetConnection(self)
@@ -60,6 +61,7 @@ class DishTableViewController: UITableViewController {
     }
     
     func loadAllDishes(urlString: String) {
+        print("url: \(urlString)")
         let url = NSURL(string: urlString)
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {
@@ -84,6 +86,7 @@ class DishTableViewController: UITableViewController {
                     let shopID = json[index]["shopId"] as?Int
                     let type = json[index]["type"] as?String
                     let name = json[index]["name"] as?String
+                    print("name: \(name)")
                     let description = json[index]["description"] as?String
                     
                     let ingredient = json[index]["ingredient"] as?String

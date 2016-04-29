@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var loginStatus: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,6 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     func displayMessage(message: String) {
         let alert = UIAlertController(title: "Message", message: message, preferredStyle: UIAlertControllerStyle.Alert)
@@ -41,60 +41,46 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInButtonClicked(sender: UIButton) {
-        NSLog("username: %@, password: %@", usernameTextField.text!, passwordTextField.text!)
+        NSLog("\nusername: %@, password: %@", usernameTextField.text!, passwordTextField.text!)
         
-        let verifyUserLoginResult = verifyUserLogin(usernameTextField.text, inputPassword: passwordTextField.text)
+        let urlString: String = FeedMe.Path.TEXT_HOST + "users/login?email=\(usernameTextField.text!)&pwd=\(passwordTextField.text!)"
         
-        if verifyUserLoginResult.statusCode == 0 {
-            usernameTextField.text = ""
-            passwordTextField.text = ""
-            usernameTextField.becomeFirstResponder()
-            
-            displayMessage(verifyUserLoginResult.description)
-        } else {
-            dismissViewControllerAnimated(true, completion: nil)
-        }
+        validateUserLogin(urlString)
     }
     
-    func verifyUsername(inputUsername: String?) -> (statusCode: Int, description: String) {
-        var statusCode = 0
-        var description = "Invalid username. Username does not exist."
+    
+    func validateUserLogin(urlString: String) {
+        let url = NSURL(string: urlString)
         
-        // MARK: TODO HTTP POST (use main thread).
-        // if username exists, return (statusCode = 1, description = password).
-        
-        return (statusCode, description)
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {
+            (myData, response, error) in
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                let json: NSDictionary
+                
+                do {
+                    json = try NSJSONSerialization.JSONObjectWithData(myData!, options: .AllowFragments) as! NSDictionary
+                    
+                    if let statusInfo = json["statusInfo"] as? String {
+                        if statusInfo == "Y" {
+                            print("Login Success!")
+                            self.loginStatus = true
+                            FeedMe.Variable.userInLoginState = true
+                            self.dismissViewControllerAnimated(true, completion: nil)
+                        } else {
+                            print("Login Fail!")
+                            self.displayMessage("Wrong username or password!")
+                        }
+                    }
+                } catch _ {
+                    
+                }
+
+            })
+        }
+        task.resume()
     }
     
-    func verifyUserLogin(inputUsername: String?, inputPassword: String?) -> (statusCode: Int, description: String) {
-        var statusCode = 0
-        var description = ""
-        
-        // (1) verify username:
-        let verifyUsernameResult = verifyUsername(inputUsername)
-        if verifyUsernameResult.statusCode == 0 {
-            usernameTextField.text = ""
-            passwordTextField.text = ""
-            usernameTextField.becomeFirstResponder()
-            
-            statusCode = 0
-            description = verifyUsernameResult.description
-        }
-        
-        // (2) verify password:
-        else if passwordTextField.text! != verifyUsernameResult.description{
-            passwordTextField.text = ""
-            usernameTextField.becomeFirstResponder()
-            
-            statusCode = 0
-            description = "Wrong username or wrong password. Try again."
-        } else {
-            statusCode = 1
-            description = ""
-        }
-        
-        return (statusCode, description)
-    }
     
     @IBAction func forgetPasswordButtonClicked(sender: UIButton) {
         

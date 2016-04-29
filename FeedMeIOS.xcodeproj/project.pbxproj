@@ -181,7 +181,7 @@
 			name = Orders;
 			sourceTree = "<group>";
 		};
-		963EBE361CBA6CB300CE5D73 /* Explore */ = {
+		963EBE361CBA6CB300CE5D73 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				96EF930B1CA916B1002C6623 /* Address.swift */,
@@ -198,7 +198,7 @@
 				963C16AE1C9904CE006C534E /* RestaurantTableViewController.swift */,
 				964137051CABED9D0028C158 /* NewAddressViewController.swift */,
 			);
-			name = Explore;
+			name = Home;
 			sourceTree = "<group>";
 		};
 		9667F6121CB695BF001AC6FF /* Me */ = {
@@ -231,7 +231,7 @@
 				961606F01CB118820079183B /* SWRevealViewController */,
 				9667F6121CB695BF001AC6FF /* Me */,
 				963EBE351CBA6C5000CE5D73 /* Orders */,
-				963EBE361CBA6CB300CE5D73 /* Explore */,
+				963EBE361CBA6CB300CE5D73 /* Home */,
 				96C47DC61CBB50F30003984D /* Extensions */,
 				96CFC4F91C87FF2A0086F4EF /* FeedMeIOS */,
 				96CFC50E1C87FF2A0086F4EF /* FeedMeIOSTests */,

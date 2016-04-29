@@ -141,6 +141,7 @@ class RestaurantTableViewController: UITableViewController {
         let restaurant = restaurants[indexPath.row]
         
         cell.nameLabel.text = restaurant.name
+        cell.typeLabel.text = restaurant.type
         cell.photoImageView.image = restaurant.logo
         
         cell.photoImageView.layer.cornerRadius = 10.0

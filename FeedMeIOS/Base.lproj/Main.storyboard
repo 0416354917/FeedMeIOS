@@ -10,7 +10,7 @@
         <!--Me-->
         <scene sceneID="4L1-dj-tE9">
             <objects>
-                <tableViewController id="xET-bd-beI" customClass="MeTableViewController" customModule="FeedMeIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="me" id="xET-bd-beI" customClass="MeTableViewController" customModule="FeedMeIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fam-SG-Jg3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Ft-9T-XCw" id="z4l-Yb-f1Z">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -236,8 +236,8 @@
                     <connections>
                         <outlet property="confirmButton" destination="uDd-DT-uNh" id="9kh-lZ-0kZ"/>
                         <outlet property="confirmPasswordTextField" destination="0lp-Sy-IBP" id="Ra7-zy-kog"/>
+                        <outlet property="emailTextField" destination="Oew-UC-ymO" id="cBs-gI-07g"/>
                         <outlet property="passwordTextField" destination="loH-Gw-haY" id="7hQ-J6-k2v"/>
-                        <outlet property="phoneTextField" destination="Oew-UC-ymO" id="yQR-tc-myp"/>
                         <outlet property="verificationCodeTextField" destination="ThV-aR-zSW" id="Qe5-6R-prT"/>
                     </connections>
                 </viewController>
@@ -453,7 +453,7 @@
                                 <rect key="frame" x="0.0" y="136" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yFe-VR-ry6" id="4xv-Rr-I1i">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJq-hB-5BI" userLabel="RestaurantName">
@@ -504,6 +504,7 @@
                                     <outlet property="nameLabel" destination="aJq-hB-5BI" id="UaD-Dd-MqZ"/>
                                     <outlet property="photoImageView" destination="Y05-Od-UEL" id="ji2-Do-4XB"/>
                                     <outlet property="timeLabel" destination="e9f-LZ-whZ" id="JEh-19-gF5"/>
+                                    <outlet property="typeLabel" destination="b9g-c2-Vwq" id="Zz6-6r-Ytq"/>
                                     <segue destination="6Nn-m5-hn9" kind="push" id="Tpc-Vb-dLf"/>
                                 </connections>
                             </tableViewCell>
@@ -535,10 +536,10 @@
                         </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DishTableViewCell" rowHeight="100" id="3W1-HE-PPU" customClass="DishTableViewCell" customModule="FeedMeIOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="203.5" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="204" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3W1-HE-PPU" id="iNQ-xG-IST">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L7Y-De-VYI">
@@ -610,7 +611,7 @@
             </objects>
             <point key="canvasLocation" x="-898" y="574"/>
         </scene>
-        <!--Your Order-->
+        <!--Your Feed-->
         <scene sceneID="j8L-6D-NlU">
             <objects>
                 <tableViewController id="e4I-LP-3UF" customClass="OrderTableViewController" customModule="FeedMeIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -754,7 +755,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e9S-W7-2sb" id="rBY-nj-ROO">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ik6-mT-EXU">
@@ -834,7 +835,7 @@
                             <outlet property="delegate" destination="e4I-LP-3UF" id="ubx-rQ-u6R"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Order" id="eaJ-6a-TxK"/>
+                    <navigationItem key="navigationItem" title="Your Feed" id="eaJ-6a-TxK"/>
                     <connections>
                         <outlet property="deliveryAddressLabel" destination="SGR-do-CMf" id="4XX-n0-BNU"/>
                         <outlet property="deliveryFeeLabel" destination="jaa-8t-OsN" id="81A-hB-510"/>
@@ -856,10 +857,10 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AddressTableViewCell" rowHeight="77" id="aMe-6H-Nyz" customClass="AddressTableViewCell" customModule="FeedMeIOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="113.5" width="320" height="77"/>
+                                <rect key="frame" x="0.0" y="114" width="320" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aMe-6H-Nyz" id="8zI-T1-MbW">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="76.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="76"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YB1-kD-DMi">
@@ -1037,7 +1038,7 @@
             </objects>
             <point key="canvasLocation" x="-1330" y="-1583"/>
         </scene>
-        <!--Your Orders-->
+        <!--Your Feeds-->
         <scene sceneID="NKw-eK-fl3">
             <objects>
                 <tableViewController id="oPR-zt-QCY" customClass="HistoryOrdersTableViewController" customModule="FeedMeIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -1058,7 +1059,7 @@
                                 <rect key="frame" x="0.0" y="136" width="320" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g85-Bv-xIY" id="OD9-5h-hk8">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="94.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Order state:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDM-bQ-UNz">
@@ -1115,7 +1116,7 @@
                             <outlet property="delegate" destination="oPR-zt-QCY" id="zIl-MT-14C"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Your Orders" id="gvb-3h-s7I"/>
+                    <navigationItem key="navigationItem" title="Your Feeds" id="gvb-3h-s7I"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="tBY-18-1vs" id="uY4-23-30v"/>
                     </connections>
@@ -1199,7 +1200,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZcS-8C-BOQ" id="Jmt-kd-Mv0">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dish name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqH-ig-2rx">

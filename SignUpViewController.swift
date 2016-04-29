@@ -10,14 +10,13 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
-    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var verificationCodeTextField: UITextField!
     @IBOutlet weak var confirmButton: UIButton!
     
-    
-    var validPhone: String?
+    var validEmail: String?
     var validVerificationCode: String?
     
     override func viewDidLoad() {
@@ -52,12 +51,12 @@ class SignUpViewController: UIViewController {
         if validateSignUpResult.statusCode == 0 {
             displayMessage(validateSignUpResult)
         } else {
-            sendVerificationCode(phoneTextField.text!)
+            sendVerificationCode(emailTextField.text!)
         }
     }
     
     @IBAction func sendAgainButtonClicked(sender: UIButton) {
-        sendVerificationCode(phoneTextField.text!)
+        sendVerificationCode(emailTextField.text!)
     }
 
     @IBAction func confirmButtonClicked(sender: UIButton) {
@@ -76,12 +75,12 @@ class SignUpViewController: UIViewController {
     func validateSignUp() -> (statusCode: Int, description: String) {
         NSLog("%@", "validate sign up...")
         // (1) validate phone:
-        let validatePhoneResult = validatePhone(phoneTextField.text)
-        if validatePhoneResult.statusCode == 0 {
-            phoneTextField.becomeFirstResponder()
-            return validatePhoneResult
+        let validateEmailResult = validateEmail(emailTextField.text)
+        if validateEmailResult.statusCode == 0 {
+            emailTextField.becomeFirstResponder()
+            return validateEmailResult
         } else {
-            self.validPhone = phoneTextField.text
+            self.validEmail = emailTextField.text
         }
         
         // (2) validate password:
@@ -95,17 +94,17 @@ class SignUpViewController: UIViewController {
         return (1, "")
     }
     
-    func validatePhone(phone: String?) -> (statusCode: Int, description: String) {
-        NSLog("validate phone number: %@", phone!)
+    func validateEmail(email: String?) -> (statusCode: Int, description: String) {
+        NSLog("validate phone number: %@", email!)
         var statusCode = 1
         var description = ""
-        if phone!.length != 10 {
+        if email!.length != 10 {
             // clear current input:
             passwordTextField.text = ""
             confirmPasswordTextField.text = ""
 
             statusCode = 0
-            description = "Not a valid phone number. Phone number should contain 10 digits."
+            description = "Not a valid Email."
         } else {
             // MARK:TODO: HTTP POST.
             // use main thread to do a HTTP POST to test match with database records.
