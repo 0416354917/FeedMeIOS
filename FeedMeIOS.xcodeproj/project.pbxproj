@@ -31,6 +31,7 @@
 		9667F6111CB694C3001AC6FF /* RetrievePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667F6101CB694C3001AC6FF /* RetrievePasswordViewController.swift */; };
 		967C825A1CB8C5D5006ED941 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C82591CB8C5D5006ED941 /* LoginViewController.swift */; };
 		9687A6241CB3C18600A0CCF5 /* SignInUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9687A6231CB3C18600A0CCF5 /* SignInUpViewController.swift */; };
+		968EA74C1CD4570E0024BD30 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968EA74B1CD4570E0024BD30 /* Security.swift */; };
 		96A855121CA4F1B900B275AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A855111CA4F1B900B275AC /* background.png */; };
 		96C47DC31CBB47680003984D /* UserSettingsParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DC21CBB47680003984D /* UserSettingsParameters.swift */; };
 		96C47DC51CBB492D0003984D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DC41CBB492D0003984D /* SignUpViewController.swift */; };
@@ -95,6 +96,7 @@
 		9667F6101CB694C3001AC6FF /* RetrievePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RetrievePasswordViewController.swift; path = FeedMeIOS/RetrievePasswordViewController.swift; sourceTree = "<group>"; };
 		967C82591CB8C5D5006ED941 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9687A6231CB3C18600A0CCF5 /* SignInUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInUpViewController.swift; path = FeedMeIOS/SignInUpViewController.swift; sourceTree = "<group>"; };
+		968EA74B1CD4570E0024BD30 /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
 		96A855111CA4F1B900B275AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		96C47DC21CBB47680003984D /* UserSettingsParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingsParameters.swift; sourceTree = "<group>"; };
 		96C47DC41CBB492D0003984D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			children = (
 				96CFC4FA1C87FF2A0086F4EF /* AppDelegate.swift */,
 				965D9E261CC4F7B100609944 /* Reachability.swift */,
+				968EA74B1CD4570E0024BD30 /* Security.swift */,
 				96D5D88F1C9CD4CB0049FC9D /* FeedMe.swift */,
 				96C47DC21CBB47680003984D /* UserSettingsParameters.swift */,
 				44308C481CA20DB8003E7BB4 /* Assets.xcassets */,
@@ -432,6 +435,7 @@
 				963C16AD1C98FFEC006C534E /* RestaurantTableViewCell.swift in Sources */,
 				9687A6241CB3C18600A0CCF5 /* SignInUpViewController.swift in Sources */,
 				96C47DCA1CBB774E0003984D /* MeTableViewController.swift in Sources */,
+				968EA74C1CD4570E0024BD30 /* Security.swift in Sources */,
 				964137061CABED9D0028C158 /* NewAddressViewController.swift in Sources */,
 				96C47DC81CBB51400003984D /* StringExtension.swift in Sources */,
 				96F673DE1CA54F25003F8D82 /* Order.swift in Sources */,

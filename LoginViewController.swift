@@ -41,9 +41,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInButtonClicked(sender: UIButton) {
-        NSLog("\nusername: %@, password: %@", usernameTextField.text!, passwordTextField.text!)
+        NSLog("username: %@, password: %@", usernameTextField.text!, passwordTextField.text!)
         
-        let urlString: String = FeedMe.Path.TEXT_HOST + "users/login?email=\(usernameTextField.text!)&pwd=\(passwordTextField.text!)"
+        let hashPassword = Security.md5(string: passwordTextField.text!)
+        NSLog("hash password: %@", hashPassword)
+
+        let urlString: String = FeedMe.Path.TEXT_HOST + "users/login?email=\(usernameTextField.text!)&pwd=\(hashPassword)"
         
         validateUserLogin(urlString)
     }
@@ -63,13 +66,13 @@ class LoginViewController: UIViewController {
                     
                     if let statusInfo = json["statusInfo"] as? String {
                         if statusInfo == "Y" {
-                            print("Login Success!")
+                            NSLog("Login Success!")
                             self.loginStatus = true
                             FeedMe.Variable.userInLoginState = true
                             self.dismissViewControllerAnimated(true, completion: nil)
                         } else {
-                            print("Login Fail!")
-                            self.displayMessage("Wrong username or password!")
+                            NSLog("Login Fail!")
+                            self.displayMessage("Incorrect email address or password!")
                         }
                     }
                 } catch _ {
