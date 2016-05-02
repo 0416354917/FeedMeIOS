@@ -279,8 +279,8 @@
 		96CFC4F91C87FF2A0086F4EF /* FeedMeIOS */ = {
 			isa = PBXGroup;
 			children = (
-				96CFC4FA1C87FF2A0086F4EF /* AppDelegate.swift */,
 				96292DAD1CAE204E0027D5DC /* FeedMeIOS-Bridging-Header.h */,
+				96CFC4FA1C87FF2A0086F4EF /* AppDelegate.swift */,
 				965D9E261CC4F7B100609944 /* Reachability.swift */,
 				968EA74B1CD4570E0024BD30 /* Security.swift */,
 				96D5D88F1C9CD4CB0049FC9D /* FeedMe.swift */,

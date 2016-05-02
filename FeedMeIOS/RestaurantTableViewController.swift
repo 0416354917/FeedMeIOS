@@ -30,6 +30,13 @@ class RestaurantTableViewController: UITableViewController {
             Reachability.alertNoInternetConnection(self)
         }
         
+        test()
+        
+    }
+    
+    func test() {
+        let user = User(email: "email", password: "password")
+        NSLog("to json string: %@", user.toJsonString(ConvertionOptions.None))
     }
     
     func loadAllRestaurants(urlString: String) {

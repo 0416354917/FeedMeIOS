@@ -102,10 +102,17 @@ class SignUpViewController: UIViewController {
         let defaultString = "\"firstname\":\"defaultfirst\"," +
         "\"lastname\":\"defaultlast\","
         
-        let jsonString = "{" + defaultString +
-            "\"email\":" + "\"\(emailTextField.text!)\"," +
-            "\"password\":" + "\"\(hashPassword)\"" +
-        "}"
+//        let jsonString = "{" + defaultString +
+//            "\"email\":" + "\"\(emailTextField.text!)\"," +
+//            "\"password\":" + "\"\(hashPassword)\"" +
+//        "}"
+        
+        // Use EVReflection:
+        let user = User(email: emailTextField.text!, password: hashPassword)
+        user.setFirstName("default_firstname")
+        user.setLastName("default_lastname")
+        let jsonString = user.toJsonString(ConvertionOptions.None)
+        
         NSLog("json string: %@", jsonString)
         
         let url = FeedMe.Path.TEXT_HOST + "users/register"
