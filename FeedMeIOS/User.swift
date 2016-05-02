@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User {
+class User: EVObject {
     // MARK: properties
     private var id: Int?
     private var firstname: String?
@@ -28,7 +28,7 @@ class User {
     var deliveryAddresses: [Address]?
     
     // MARK: initialisation methods
-    init() {
+    required init() {
         
     }
     
