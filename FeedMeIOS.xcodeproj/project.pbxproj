@@ -15,6 +15,11 @@
 		961606F81CB11B100079183B /* HistoryOrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961606F71CB11B100079183B /* HistoryOrdersTableViewController.swift */; };
 		961C2E221CA6197700C562F8 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C2E211CA6197700C562F8 /* OrderTableViewCell.swift */; };
 		961C2E241CA6199500C562F8 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C2E231CA6199500C562F8 /* OrderTableViewController.swift */; };
+		961CE1E01CD70D0800540294 /* EVExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961CE1DB1CD70D0800540294 /* EVExtensions.swift */; };
+		961CE1E11CD70D0800540294 /* EVObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961CE1DC1CD70D0800540294 /* EVObject.swift */; };
+		961CE1E21CD70D0800540294 /* EVObjectDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961CE1DD1CD70D0800540294 /* EVObjectDescription.swift */; };
+		961CE1E31CD70D0800540294 /* EVReflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961CE1DE1CD70D0800540294 /* EVReflection.swift */; };
+		961CE1E41CD70D0800540294 /* EVWorkaroundHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961CE1DF1CD70D0800540294 /* EVWorkaroundHelpers.swift */; };
 		96292DB01CAE204F0027D5DC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96292DAF1CAE204F0027D5DC /* SWRevealViewController.m */; };
 		962C5CF01CAB7E010009CBF3 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C5CEE1CAB7E010009CBF3 /* SSRadioButton.swift */; };
 		962C5CF11CAB7E010009CBF3 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C5CEF1CAB7E010009CBF3 /* SSRadioButtonsController.swift */; };
@@ -81,6 +86,11 @@
 		961606F71CB11B100079183B /* HistoryOrdersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryOrdersTableViewController.swift; sourceTree = "<group>"; };
 		961C2E211CA6197700C562F8 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderTableViewCell.swift; path = FeedMeIOS/OrderTableViewCell.swift; sourceTree = "<group>"; };
 		961C2E231CA6199500C562F8 /* OrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderTableViewController.swift; path = FeedMeIOS/OrderTableViewController.swift; sourceTree = "<group>"; };
+		961CE1DB1CD70D0800540294 /* EVExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVExtensions.swift; sourceTree = "<group>"; };
+		961CE1DC1CD70D0800540294 /* EVObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVObject.swift; sourceTree = "<group>"; };
+		961CE1DD1CD70D0800540294 /* EVObjectDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVObjectDescription.swift; sourceTree = "<group>"; };
+		961CE1DE1CD70D0800540294 /* EVReflection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVReflection.swift; sourceTree = "<group>"; };
+		961CE1DF1CD70D0800540294 /* EVWorkaroundHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVWorkaroundHelpers.swift; sourceTree = "<group>"; };
 		96292DAD1CAE204E0027D5DC /* FeedMeIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedMeIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		96292DAE1CAE204F0027D5DC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = FeedMeIOS/SWRevealViewController.h; sourceTree = "<group>"; };
 		96292DAF1CAE204F0027D5DC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = FeedMeIOS/SWRevealViewController.m; sourceTree = "<group>"; };
@@ -162,6 +172,18 @@
 			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
+		961CE1DA1CD70CE800540294 /* EVReflection */ = {
+			isa = PBXGroup;
+			children = (
+				961CE1DB1CD70D0800540294 /* EVExtensions.swift */,
+				961CE1DC1CD70D0800540294 /* EVObject.swift */,
+				961CE1DD1CD70D0800540294 /* EVObjectDescription.swift */,
+				961CE1DE1CD70D0800540294 /* EVReflection.swift */,
+				961CE1DF1CD70D0800540294 /* EVWorkaroundHelpers.swift */,
+			);
+			name = EVReflection;
+			sourceTree = "<group>";
+		};
 		962C5CED1CAB7DD00009CBF3 /* SSRadioButtonController */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +252,7 @@
 		96CFC4EE1C87FF2A0086F4EF = {
 			isa = PBXGroup;
 			children = (
+				961CE1DA1CD70CE800540294 /* EVReflection */,
 				962C5CED1CAB7DD00009CBF3 /* SSRadioButtonController */,
 				961606F01CB118820079183B /* SWRevealViewController */,
 				9667F6121CB695BF001AC6FF /* Me */,
@@ -256,8 +279,8 @@
 		96CFC4F91C87FF2A0086F4EF /* FeedMeIOS */ = {
 			isa = PBXGroup;
 			children = (
-				96CFC4FA1C87FF2A0086F4EF /* AppDelegate.swift */,
 				96292DAD1CAE204E0027D5DC /* FeedMeIOS-Bridging-Header.h */,
+				96CFC4FA1C87FF2A0086F4EF /* AppDelegate.swift */,
 				965D9E261CC4F7B100609944 /* Reachability.swift */,
 				968EA74B1CD4570E0024BD30 /* Security.swift */,
 				96D5D88F1C9CD4CB0049FC9D /* FeedMe.swift */,
@@ -428,10 +451,12 @@
 				96D5D8981C9D00540049FC9D /* DishTableViewCell.swift in Sources */,
 				96292DB01CAE204F0027D5DC /* SWRevealViewController.m in Sources */,
 				96EF93161CA91831002C6623 /* AddressTableViewController.swift in Sources */,
+				961CE1E11CD70D0800540294 /* EVObject.swift in Sources */,
 				961606F61CB11AF50079183B /* HistoryOrdersTableViewCell.swift in Sources */,
 				961606F41CB11AD40079183B /* HistoryOrders.swift in Sources */,
 				963C16B11C9905AB006C534E /* Restaurant.swift in Sources */,
 				965D9E271CC4F7B100609944 /* Reachability.swift in Sources */,
+				961CE1E01CD70D0800540294 /* EVExtensions.swift in Sources */,
 				96EF930C1CA916B1002C6623 /* Address.swift in Sources */,
 				961606F81CB11B100079183B /* HistoryOrdersTableViewController.swift in Sources */,
 				962C5CF11CAB7E010009CBF3 /* SSRadioButtonsController.swift in Sources */,
@@ -442,6 +467,7 @@
 				964137061CABED9D0028C158 /* NewAddressViewController.swift in Sources */,
 				96C47DC81CBB51400003984D /* StringExtension.swift in Sources */,
 				96F673DE1CA54F25003F8D82 /* Order.swift in Sources */,
+				961CE1E31CD70D0800540294 /* EVReflection.swift in Sources */,
 				967C825A1CB8C5D5006ED941 /* LoginViewController.swift in Sources */,
 				963C16AF1C9904CE006C534E /* RestaurantTableViewController.swift in Sources */,
 				96D5D8921C9CF9F70049FC9D /* Dish.swift in Sources */,
@@ -449,6 +475,7 @@
 				961C2E221CA6197700C562F8 /* OrderTableViewCell.swift in Sources */,
 				96CFC4FB1C87FF2A0086F4EF /* AppDelegate.swift in Sources */,
 				96C47DC31CBB47680003984D /* FeedMeSettings.swift in Sources */,
+				961CE1E41CD70D0800540294 /* EVWorkaroundHelpers.swift in Sources */,
 				96C47DCC1CBB9CD90003984D /* MeTableViewCell.swift in Sources */,
 				96EF93081CA90391002C6623 /* User.swift in Sources */,
 				96EF93141CA91821002C6623 /* AddressTableViewCell.swift in Sources */,
@@ -458,6 +485,7 @@
 				963A24CC1CD6E5B10048F121 /* FeedMeAlert.swift in Sources */,
 				96D5D8901C9CD4CB0049FC9D /* FeedMe.swift in Sources */,
 				961C2E241CA6199500C562F8 /* OrderTableViewController.swift in Sources */,
+				961CE1E21CD70D0800540294 /* EVObjectDescription.swift in Sources */,
 				7BEAF4C51CB8DB0300F1568B /* ViewControllerExtension.swift in Sources */,
 				96D5D89A1C9D009C0049FC9D /* DishTableViewController.swift in Sources */,
 				962C5CF01CAB7E010009CBF3 /* SSRadioButton.swift in Sources */,

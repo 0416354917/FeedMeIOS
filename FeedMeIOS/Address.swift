@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Address {
+class Address: EVObject {
     var userName: String?
     var addressLine1: String?
     var addressLine2: String?
@@ -18,6 +18,9 @@ class Address {
     var phone: String?
     var selected: Bool! = false
     
+    required init() {
+        
+    }
     
     init(userName: String?, addressLine1: String?, addressLine2: String?, postcode: String?, phone: String?, suburb: String?, state: String?, selected: Bool?) {
         self.userName = userName
