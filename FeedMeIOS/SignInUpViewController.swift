@@ -32,6 +32,7 @@ class SignInUpViewController: UIViewController {
         self.presentViewController(nextViewController, animated: false, completion: nil)
     }
     
+
     override func viewWillAppear(animated: Bool) {
         if FeedMe.Variable.userInLoginState == true {
             self.dismissViewControllerAnimated(true, completion: nil)

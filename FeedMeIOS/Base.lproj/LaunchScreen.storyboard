@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,12 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XUg-aL-vSz">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" red="0.79607843140000001" green="0.16078431369999999" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright (c) 2016 FeedMe. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEU-pP-Rse">
+                                <rect key="frame" x="20" y="661" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.96957134050000005" green="0.98519266059999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slogan" translatesAutoresizingMaskIntoConstraints="NO" id="XMv-gQ-x9t">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="4dj-Kt-Hae"/>
+                                </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="9HZ-gF-yVu">
-                                <rect key="frame" x="35" y="145" width="345" height="254"/>
+                                <rect key="frame" x="20" y="234" width="374" height="263"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="531" id="ru0-Rx-Uqu"/>
                                 </constraints>
@@ -32,36 +41,21 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright (c) 2016 FeedMe. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEU-pP-Rse">
-                                <rect key="frame" x="20" y="661" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.79607843140000001" green="0.16078431369999999" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="XUg-aL-vSz" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="7lY-J9-ygx"/>
-                            <constraint firstItem="XUg-aL-vSz" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="91l-dM-o8b"/>
-                            <constraint firstItem="XUg-aL-vSz" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="NVM-cb-OoE"/>
-                            <constraint firstAttribute="trailing" secondItem="XUg-aL-vSz" secondAttribute="trailing" id="QNq-dc-Lyf"/>
-                            <constraint firstItem="9HZ-gF-yVu" firstAttribute="width" secondItem="XUg-aL-vSz" secondAttribute="width" constant="-69" id="UaP-hI-vdV"/>
-                            <constraint firstAttribute="trailing" secondItem="XUg-aL-vSz" secondAttribute="trailing" id="Y03-XS-0JB"/>
-                            <constraint firstItem="9HZ-gF-yVu" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="125" id="Y5L-KU-FBA"/>
-                            <constraint firstItem="9HZ-gF-yVu" firstAttribute="centerX" secondItem="XUg-aL-vSz" secondAttribute="centerX" id="bpt-YL-opR"/>
-                            <constraint firstItem="XUg-aL-vSz" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ce4-va-d4d"/>
-                            <constraint firstItem="XUg-aL-vSz" firstAttribute="top" secondItem="9HZ-gF-yVu" secondAttribute="bottom" constant="-271" id="mK4-V0-HwS"/>
-                            <constraint firstItem="XUg-aL-vSz" firstAttribute="leading" secondItem="9HZ-gF-yVu" secondAttribute="trailing" constant="-565" id="t4m-hU-8Sc"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="9HZ-gF-yVu" secondAttribute="bottom" constant="337" id="tpb-OJ-yj9"/>
+                            <constraint firstItem="XMv-gQ-x9t" firstAttribute="centerX" secondItem="9HZ-gF-yVu" secondAttribute="centerX" id="7iS-FS-3s4"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="PEU-pP-Rse" secondAttribute="bottom" constant="54" id="Hql-NW-l5n"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="9HZ-gF-yVu" secondAttribute="leading" id="OBw-Yf-aaJ"/>
+                            <constraint firstItem="PEU-pP-Rse" firstAttribute="top" secondItem="9HZ-gF-yVu" secondAttribute="bottom" constant="164" id="OGv-s1-P9C"/>
+                            <constraint firstItem="PEU-pP-Rse" firstAttribute="trailing" secondItem="9HZ-gF-yVu" secondAttribute="trailing" id="OR5-yU-Oty"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9HZ-gF-yVu" secondAttribute="trailing" id="V0J-t9-ur6"/>
+                            <constraint firstItem="9HZ-gF-yVu" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="214" id="Y5L-KU-FBA"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="9HZ-gF-yVu" secondAttribute="bottom" constant="239" id="tpb-OJ-yj9"/>
+                            <constraint firstItem="PEU-pP-Rse" firstAttribute="leading" secondItem="9HZ-gF-yVu" secondAttribute="leading" id="u4a-tr-5Dp"/>
+                            <constraint firstItem="XMv-gQ-x9t" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="vsY-Ff-4Jr"/>
+                            <constraint firstItem="XMv-gQ-x9t" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="wcL-VE-Efw"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="7lY-J9-ygx"/>
-                                <exclude reference="Y03-XS-0JB"/>
-                                <exclude reference="mK4-V0-HwS"/>
-                                <exclude reference="t4m-hU-8Sc"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
@@ -72,5 +66,6 @@
     </scenes>
     <resources>
         <image name="Logo" width="1072" height="260"/>
+        <image name="slogan" width="1445" height="429"/>
     </resources>
 </document>
