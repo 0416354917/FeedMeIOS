@@ -59,6 +59,14 @@ class LoginViewController: UIViewController {
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {
             (myData, response, error) in
             
+            if myData != nil {
+                let dataAsString = NSString(data: myData!, encoding: NSUTF8StringEncoding)
+                NSLog("data: %@", dataAsString!)
+            }
+            if response != nil {
+                NSLog("response: %@", response!)
+            }
+            
             dispatch_async(dispatch_get_main_queue(), {
                 let json: NSDictionary
                 
@@ -69,6 +77,7 @@ class LoginViewController: UIViewController {
                         if statusInfo == "Y" {
                             NSLog("Login Success!")
                             self.loginStatus = true
+                            FeedMe.user = User(email: self.usernameTextField.text!, password: self.passwordTextField.text!)
                             FeedMe.Variable.userInLoginState = true
                             self.dismissViewControllerAnimated(true, completion: nil)
                         } else {
