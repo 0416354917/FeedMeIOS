@@ -230,6 +230,11 @@ class DishTableViewController: UITableViewController {
         cell.photoImageView.clipsToBounds = true
         cell.backgroundColor = FeedMe.transColor7
         
+        cell.addToShoppingCart.layer.cornerRadius = 5.0
+        cell.addToShoppingCart.layer.borderColor = FeedMe.mainRed.CGColor
+        cell.addToShoppingCart.layer.borderWidth = 1.0
+        cell.addToShoppingCart.clipsToBounds = true
+        
         return cell
     }
     
