@@ -13,8 +13,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-    @IBOutlet weak var verificationCodeTextField: UITextField!
-    @IBOutlet weak var confirmButton: UIButton!
+//    @IBOutlet weak var verificationCodeTextField: UITextField!
+//    @IBOutlet weak var confirmButton: UIButton!
     
     var validEmail: String?
     var validVerificationCode: String?
@@ -23,7 +23,7 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.confirmButton.userInteractionEnabled = false
+//        self.confirmButton.userInteractionEnabled = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -190,12 +190,15 @@ class SignUpViewController: UIViewController {
         return (statusCode, description)
     }
   
-    // MARK: - Not implemented now. To be implemented.
+    // MARK: - Not implemented now. To be implemented in the future.
     
+    /*
     @IBAction func sendAgainButtonClicked(sender: UIButton) {
         sendVerificationCode(emailTextField.text!)
     }
+ */
     
+    /*
     @IBAction func confirmButtonClicked(sender: UIButton) {
         //        let validateVerificationCodeResult = validateVerificationCode(verificationCodeTextField.text)
         //        if validateVerificationCodeResult.statusCode == 0 {
@@ -204,7 +207,9 @@ class SignUpViewController: UIViewController {
         //            commitSignUp()
         //        }
     }
+ */
     
+    /*
     func sendVerificationCode(phone: String) {
         // clear current input if any:
         verificationCodeTextField.text = ""
@@ -217,7 +222,9 @@ class SignUpViewController: UIViewController {
         // self.confirmButton.userInteractionEnabled = true
         
     }
+     */
     
+    /*
     func validateVerificationCode(verificationCode: String?) -> (statusCode: Int, description: String) {
         var statusCode = 1
         var description = ""
@@ -228,7 +235,7 @@ class SignUpViewController: UIViewController {
         
         return (statusCode, description)
     }
-    
+    */
     
     /*
     // MARK: - Navigation
