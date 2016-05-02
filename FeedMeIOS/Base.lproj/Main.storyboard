@@ -320,8 +320,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="passwordTextField" destination="uZz-Kl-8xo" id="2BM-V5-nP1"/>
-                        <outlet property="usernameTextField" destination="8wp-PC-O92" id="kcu-KM-2ef"/>
+                        <outlet property="passwordTextField" destination="uZz-Kl-8xo" id="M8E-GP-nYa"/>
+                        <outlet property="usernameTextField" destination="8wp-PC-O92" id="6Y5-75-Fo1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bk2-kg-YjU" userLabel="First Responder" sceneMemberID="firstResponder"/>

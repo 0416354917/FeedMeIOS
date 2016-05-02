@@ -103,9 +103,9 @@ class HistoryOrdersTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Current Orders (\(historyOrders!.getCurrentOrders()!.count))"
+            return "Current Feeds (\(historyOrders!.getCurrentOrders()!.count))"
         case 1:
-            return "History Orders (\(historyOrders!.getPastOrders()!.count))"
+            return "Past Feeds (\(historyOrders!.getPastOrders()!.count))"
         default:
             return ""
         }

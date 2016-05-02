@@ -35,8 +35,8 @@ class SignUpViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func displayMessage(validationResult: (statusCode: Int, description: String)) {
-        let alert = UIAlertController(title: "Message", message: validationResult.description, preferredStyle: UIAlertControllerStyle.Alert)
+    func displayMessage(messgae: String) {
+        let alert = UIAlertController(title: "Message", message: messgae, preferredStyle: UIAlertControllerStyle.Alert)
         
         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
         
@@ -47,86 +47,162 @@ class SignUpViewController: UIViewController {
 
     
     @IBAction func signUpButtonClicked(sender: UIButton) {
-        let validateSignUpResult = validateSignUp()
-        if validateSignUpResult.statusCode == 0 {
-            displayMessage(validateSignUpResult)
-        } else {
-            sendVerificationCode(emailTextField.text!)
-        }
+        validateSignUp()
     }
-    
-    @IBAction func sendAgainButtonClicked(sender: UIButton) {
-        sendVerificationCode(emailTextField.text!)
-    }
-
-    @IBAction func confirmButtonClicked(sender: UIButton) {
-        let validateVerificationCodeResult = validateVerificationCode(verificationCodeTextField.text)
-        if validateVerificationCodeResult.statusCode == 0 {
-            displayMessage(validateVerificationCodeResult)
-        } else {
-            commitSignUp()
-        }
-    }
-    
     
     //statusCode = 0: validate fail.
     //statusCode = 1: validate success.
     //description: validation result description.
-    func validateSignUp() -> (statusCode: Int, description: String) {
-        NSLog("%@", "validate sign up...")
-        // (1) validate phone:
-        let validateEmailResult = validateEmail(emailTextField.text)
-        if validateEmailResult.statusCode == 0 {
-            emailTextField.becomeFirstResponder()
-            return validateEmailResult
+    func validateSignUp() {
+        NSLog("%@", "Validate sign up...")
+        let validateUserInputResult = validateUserInput()
+        if validateUserInputResult.statusCode == 0 {
+            displayMessage(validateUserInputResult.description)
         } else {
-            self.validEmail = emailTextField.text
+            let urlString = FeedMe.Path.TEXT_HOST + "/users/checkEmail?email=" + emailTextField.text!
+            let url = NSURL(string: urlString)
+            let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {
+                (data, response, error) in
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                    NSLog("response: %@", responseString!)
+                    
+                    let json: NSDictionary
+                    do {
+                        json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as! NSDictionary
+                        
+                        if let statusInfo = json["statusInfo"] as? String {
+                            if statusInfo == "N" {
+                                FeedMeAlert.alertSignUpFailure(self, message: "Email is already taken")
+                            } else if statusInfo == "Y" {
+                                self.commitSignUp()
+                            } else {
+                                FeedMeAlert.alertSignUpFailure(self, message: "Unkown Error")
+                            }
+                        }
+                        
+                    } catch _ {
+                        
+                    }
+                })
+            }
+            task.resume()
+        }
+    }
+    
+    func commitSignUp() {
+        // MARK: TODO
+        // Cache user data in local device settings once signing up successfully.
+        // Prompt user whether allow current account automatically login next time.
+        let hashPassword = Security.md5(string: passwordTextField.text!)
+        let postString = "{\"email\":\"\(emailTextField.text!)\",\"password\":\"\(hashPassword)\"}"
+        NSLog("post data: %@", postString)
+        
+        let defaultString = "\"firstname\":\"defaultfirst\"," +
+        "\"lastname\":\"defaultlast\","
+        
+        let jsonString = "{" + defaultString +
+            "\"email\":" + "\"\(emailTextField.text!)\"," +
+            "\"password\":" + "\"\(hashPassword)\"" +
+        "}"
+        NSLog("json string: %@", jsonString)
+        
+        let url = FeedMe.Path.TEXT_HOST + "users/register"
+        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        // NSLog("reuqest body: %@", request.HTTPBody!)
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            guard error == nil && data != nil else {
+                // check for fundamental networking error
+                NSLog("error: %@", error!)
+                FeedMeAlert.alertSignUpFailure(self, message: "Unknown error")
+                return
+            }
+            
+            if let httpStatus = response as? NSHTTPURLResponse where httpStatus.statusCode != 200 {
+                // check for http errors
+                NSLog("statusCode should be 200, but is: %@", httpStatus.statusCode)
+                NSLog("response: %@", response!)
+                FeedMeAlert.alertSignUpFailure(self, message: "Unknown error")
+                return
+            }
+            
+            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            NSLog("response string: %@", responseString!)
+            
+            FeedMe.Variable.userInLoginState = true
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        task.resume()
+    }
+
+    func validateUserInput() -> (statusCode: Int, description: String) {
+        NSLog("Validate user input...")
+        
+        let validateEmailResult = validateEmail()
+        if validateEmailResult.statusCode == 0 {
+            return validateEmailResult
         }
         
-        // (2) validate password:
-        let validatePasswordResult = validatePassword(passwordTextField.text, confirmPassword: confirmPasswordTextField.text)
+        let validatePasswordResult = validatePassword()
         if validatePasswordResult.statusCode == 0 {
-            passwordTextField.becomeFirstResponder()
             return validatePasswordResult
         }
         
-        // default return after all validation succeeded:
         return (1, "")
     }
     
-    func validateEmail(email: String?) -> (statusCode: Int, description: String) {
-        NSLog("validate phone number: %@", email!)
+    func validateEmail() -> (statusCode: Int, description: String) {
+        let email = emailTextField.text!
+        NSLog("Validate email: %@", email)
         var statusCode = 1
         var description = ""
-        if email!.length != 10 {
+        // MARK: to be fixed!
+        if email.length == 0 {
             // clear current input:
             passwordTextField.text = ""
             confirmPasswordTextField.text = ""
-
             statusCode = 0
             description = "Not a valid Email."
-        } else {
-            // MARK:TODO: HTTP POST.
-            // use main thread to do a HTTP POST to test match with database records.
         }
         
         return (statusCode, description)
     }
     
-    func validatePassword(password: String?, confirmPassword: String?) -> (statusCode: Int, description: String) {
-        NSLog("validate password: %@", password!)
+    func validatePassword() -> (statusCode: Int, description: String) {
+        let password = passwordTextField.text!
+        let confirmPassword = confirmPasswordTextField.text!
+        NSLog("Validate password: %@, confirm password: %@", password, confirmPassword)
         var statusCode = 1
         var description = ""
-        if password!.length == 0 || confirmPassword!.length == 0 ||  password! != confirmPassword! {
+        if password.length == 0 || confirmPassword.length == 0 ||  password != confirmPassword {
             // clear current input:
             passwordTextField.text = ""
             confirmPasswordTextField.text = ""
-            
             statusCode = 0
             description = "Password mismatch, enter again."
         }
         
         return (statusCode, description)
+    }
+  
+    // MARK: - Not implemented now. To be implemented.
+    
+    @IBAction func sendAgainButtonClicked(sender: UIButton) {
+        sendVerificationCode(emailTextField.text!)
+    }
+    
+    @IBAction func confirmButtonClicked(sender: UIButton) {
+        //        let validateVerificationCodeResult = validateVerificationCode(verificationCodeTextField.text)
+        //        if validateVerificationCodeResult.statusCode == 0 {
+        //            displayMessage(validateVerificationCodeResult)
+        //        } else {
+        //            commitSignUp()
+        //        }
     }
     
     func sendVerificationCode(phone: String) {
@@ -153,11 +229,6 @@ class SignUpViewController: UIViewController {
         return (statusCode, description)
     }
     
-    func commitSignUp() {
-        // MARK: TODO: HTTP POST.
-        // Cache user data in local device settings once signing up successfully.
-        // Prompt user whether allow current account automatically login next time.
-    }
     
     /*
     // MARK: - Navigation

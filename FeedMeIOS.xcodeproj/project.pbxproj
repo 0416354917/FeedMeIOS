@@ -19,6 +19,7 @@
 		962C5CF01CAB7E010009CBF3 /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C5CEE1CAB7E010009CBF3 /* SSRadioButton.swift */; };
 		962C5CF11CAB7E010009CBF3 /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C5CEF1CAB7E010009CBF3 /* SSRadioButtonsController.swift */; };
 		962C5CF31CAB7E230009CBF3 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 962C5CF21CAB7E230009CBF3 /* LICENSE */; };
+		963A24CC1CD6E5B10048F121 /* FeedMeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963A24CB1CD6E5B10048F121 /* FeedMeAlert.swift */; };
 		963C16AD1C98FFEC006C534E /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C16AC1C98FFEC006C534E /* RestaurantTableViewCell.swift */; };
 		963C16AF1C9904CE006C534E /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C16AE1C9904CE006C534E /* RestaurantTableViewController.swift */; };
 		963C16B11C9905AB006C534E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963C16B01C9905AB006C534E /* Restaurant.swift */; };
@@ -33,7 +34,7 @@
 		9687A6241CB3C18600A0CCF5 /* SignInUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9687A6231CB3C18600A0CCF5 /* SignInUpViewController.swift */; };
 		968EA74C1CD4570E0024BD30 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968EA74B1CD4570E0024BD30 /* Security.swift */; };
 		96A855121CA4F1B900B275AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A855111CA4F1B900B275AC /* background.png */; };
-		96C47DC31CBB47680003984D /* UserSettingsParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DC21CBB47680003984D /* UserSettingsParameters.swift */; };
+		96C47DC31CBB47680003984D /* FeedMeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DC21CBB47680003984D /* FeedMeSettings.swift */; };
 		96C47DC51CBB492D0003984D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DC41CBB492D0003984D /* SignUpViewController.swift */; };
 		96C47DC81CBB51400003984D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DC71CBB51400003984D /* StringExtension.swift */; };
 		96C47DCA1CBB774E0003984D /* MeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DC91CBB774E0003984D /* MeTableViewController.swift */; };
@@ -80,12 +81,13 @@
 		961606F71CB11B100079183B /* HistoryOrdersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryOrdersTableViewController.swift; sourceTree = "<group>"; };
 		961C2E211CA6197700C562F8 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderTableViewCell.swift; path = FeedMeIOS/OrderTableViewCell.swift; sourceTree = "<group>"; };
 		961C2E231CA6199500C562F8 /* OrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderTableViewController.swift; path = FeedMeIOS/OrderTableViewController.swift; sourceTree = "<group>"; };
-		96292DAD1CAE204E0027D5DC /* FeedMeIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FeedMeIOS-Bridging-Header.h"; path = "FeedMeIOS/FeedMeIOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		96292DAD1CAE204E0027D5DC /* FeedMeIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedMeIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		96292DAE1CAE204F0027D5DC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = FeedMeIOS/SWRevealViewController.h; sourceTree = "<group>"; };
 		96292DAF1CAE204F0027D5DC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = FeedMeIOS/SWRevealViewController.m; sourceTree = "<group>"; };
 		962C5CEE1CAB7E010009CBF3 /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		962C5CEF1CAB7E010009CBF3 /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		962C5CF21CAB7E230009CBF3 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		963A24CB1CD6E5B10048F121 /* FeedMeAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedMeAlert.swift; sourceTree = "<group>"; };
 		963C16AC1C98FFEC006C534E /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantTableViewCell.swift; path = FeedMeIOS/RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		963C16AE1C9904CE006C534E /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantTableViewController.swift; path = FeedMeIOS/RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		963C16B01C9905AB006C534E /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = FeedMeIOS/Restaurant.swift; sourceTree = "<group>"; };
@@ -98,7 +100,7 @@
 		9687A6231CB3C18600A0CCF5 /* SignInUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInUpViewController.swift; path = FeedMeIOS/SignInUpViewController.swift; sourceTree = "<group>"; };
 		968EA74B1CD4570E0024BD30 /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
 		96A855111CA4F1B900B275AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		96C47DC21CBB47680003984D /* UserSettingsParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingsParameters.swift; sourceTree = "<group>"; };
+		96C47DC21CBB47680003984D /* FeedMeSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedMeSettings.swift; sourceTree = "<group>"; };
 		96C47DC41CBB492D0003984D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		96C47DC71CBB51400003984D /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		96C47DC91CBB774E0003984D /* MeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeTableViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +158,6 @@
 				961606F11CB119930079183B /* LICENSE.txt */,
 				96292DAE1CAE204F0027D5DC /* SWRevealViewController.h */,
 				96292DAF1CAE204F0027D5DC /* SWRevealViewController.m */,
-				96292DAD1CAE204E0027D5DC /* FeedMeIOS-Bridging-Header.h */,
 			);
 			name = SWRevealViewController;
 			sourceTree = "<group>";
@@ -256,10 +257,12 @@
 			isa = PBXGroup;
 			children = (
 				96CFC4FA1C87FF2A0086F4EF /* AppDelegate.swift */,
+				96292DAD1CAE204E0027D5DC /* FeedMeIOS-Bridging-Header.h */,
 				965D9E261CC4F7B100609944 /* Reachability.swift */,
 				968EA74B1CD4570E0024BD30 /* Security.swift */,
 				96D5D88F1C9CD4CB0049FC9D /* FeedMe.swift */,
-				96C47DC21CBB47680003984D /* UserSettingsParameters.swift */,
+				963A24CB1CD6E5B10048F121 /* FeedMeAlert.swift */,
+				96C47DC21CBB47680003984D /* FeedMeSettings.swift */,
 				44308C481CA20DB8003E7BB4 /* Assets.xcassets */,
 				96A855111CA4F1B900B275AC /* background.png */,
 				96CFC4FE1C87FF2A0086F4EF /* Main.storyboard */,
@@ -445,13 +448,14 @@
 				9667F6111CB694C3001AC6FF /* RetrievePasswordViewController.swift in Sources */,
 				961C2E221CA6197700C562F8 /* OrderTableViewCell.swift in Sources */,
 				96CFC4FB1C87FF2A0086F4EF /* AppDelegate.swift in Sources */,
-				96C47DC31CBB47680003984D /* UserSettingsParameters.swift in Sources */,
+				96C47DC31CBB47680003984D /* FeedMeSettings.swift in Sources */,
 				96C47DCC1CBB9CD90003984D /* MeTableViewCell.swift in Sources */,
 				96EF93081CA90391002C6623 /* User.swift in Sources */,
 				96EF93141CA91821002C6623 /* AddressTableViewCell.swift in Sources */,
 				96C47DC51CBB492D0003984D /* SignUpViewController.swift in Sources */,
 				9644CE8D1CC0FC7700260498 /* OrderDetailTableViewCell.swift in Sources */,
 				9644CE8F1CC0FC8E00260498 /* OrderDetailTableViewController.swift in Sources */,
+				963A24CC1CD6E5B10048F121 /* FeedMeAlert.swift in Sources */,
 				96D5D8901C9CD4CB0049FC9D /* FeedMe.swift in Sources */,
 				961C2E241CA6199500C562F8 /* OrderTableViewController.swift in Sources */,
 				7BEAF4C51CB8DB0300F1568B /* ViewControllerExtension.swift in Sources */,
