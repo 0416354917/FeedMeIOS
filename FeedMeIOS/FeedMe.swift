@@ -16,7 +16,7 @@ struct FeedMe {
     }
     
     struct Variable {
-        static var userID: String?
+        static var userID: Int?
         static var restaurantID: Int?
         static var restaurantName: String?
         static var dishID: Int?
@@ -28,6 +28,7 @@ struct FeedMe {
     }
     
     static var user: User?
+    static var machineCode: String = UIDevice.currentDevice().identifierForVendor!.UUIDString
     
     static var transColor4 = UIColor(red: 255/225, green: 255/255, blue: 255/255, alpha: 0.4)
     static var transColor7 = UIColor(red: 255/225, green: 255/255, blue: 255/255, alpha: 0.7)

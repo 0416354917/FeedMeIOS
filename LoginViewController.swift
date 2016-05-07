@@ -78,6 +78,8 @@ class LoginViewController: UIViewController {
                             NSLog("Login Success!")
                             self.loginStatus = true
                             FeedMe.user = User(email: self.usernameTextField.text!, password: self.passwordTextField.text!)
+                            // set the global user id here:
+                            // FeedMe.Variable.userID =
                             FeedMe.Variable.userInLoginState = true
                             self.dismissViewControllerAnimated(true, completion: nil)
                         } else {

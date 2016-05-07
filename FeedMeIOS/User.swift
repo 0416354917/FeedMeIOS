@@ -22,6 +22,7 @@ class User: EVObject {
     private var email: String?
     private var title: String?
     private var preferedLanguage: String?
+    private var machineCode: String?
     
     // MARK: To be fixed!
     var defaultDeliveryAddress: Address? = Address(userName: "CSIT", addressLine1: "108 N Rd", addressLine2: "Acton", postcode: "2601", phone: "(02) 6125 5111", suburb: "Canberra", state: "ACT", selected: true)
@@ -126,4 +127,11 @@ class User: EVObject {
         return self.preferedLanguage
     }
     
+    func setMachineCode(machineCode: String?) {
+        self.machineCode = machineCode
+    }
+    
+    func getMachineCode() -> String? {
+        return self.machineCode
+    }
 }

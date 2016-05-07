@@ -103,6 +103,7 @@ class SignUpViewController: UIViewController {
         let user = User(email: emailTextField.text!, password: hashPassword)
         user.setFirstName("default_firstname")
         user.setLastName("default_lastname")
+        // user.setMachineCode(UIDevice.currentDevice().identifierForVendor!.UUIDString)
         let jsonString = user.toJsonString(ConvertionOptions.None)
         
         NSLog("json string: %@", jsonString)

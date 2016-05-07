@@ -36,10 +36,14 @@
 		9644CE8F1CC0FC8E00260498 /* OrderDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9644CE8E1CC0FC8E00260498 /* OrderDetailTableViewController.swift */; };
 		965D9E271CC4F7B100609944 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965D9E261CC4F7B100609944 /* Reachability.swift */; };
 		9667F6111CB694C3001AC6FF /* RetrievePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9667F6101CB694C3001AC6FF /* RetrievePasswordViewController.swift */; };
+		966AA58C1CDDBE5200B6E141 /* PostOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966AA58B1CDDBE5200B6E141 /* PostOrder.swift */; };
+		966AA58E1CDDC06900B6E141 /* OrderDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966AA58D1CDDC06900B6E141 /* OrderDish.swift */; };
+		966AA5901CDDCD1600B6E141 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966AA58F1CDDCD1600B6E141 /* PaymentViewController.swift */; };
 		967C825A1CB8C5D5006ED941 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C82591CB8C5D5006ED941 /* LoginViewController.swift */; };
 		9687A6241CB3C18600A0CCF5 /* SignInUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9687A6231CB3C18600A0CCF5 /* SignInUpViewController.swift */; };
 		968EA74C1CD4570E0024BD30 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968EA74B1CD4570E0024BD30 /* Security.swift */; };
 		96A855121CA4F1B900B275AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 96A855111CA4F1B900B275AC /* background.png */; };
+		96AB71F01CDDE6FA00063C05 /* PostOrderHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB71EF1CDDE6FA00063C05 /* PostOrderHeader.swift */; };
 		96C47DC31CBB47680003984D /* FeedMeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DC21CBB47680003984D /* FeedMeSettings.swift */; };
 		96C47DC51CBB492D0003984D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DC41CBB492D0003984D /* SignUpViewController.swift */; };
 		96C47DC81CBB51400003984D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C47DC71CBB51400003984D /* StringExtension.swift */; };
@@ -108,10 +112,14 @@
 		9644CE8E1CC0FC8E00260498 /* OrderDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailTableViewController.swift; sourceTree = "<group>"; };
 		965D9E261CC4F7B100609944 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9667F6101CB694C3001AC6FF /* RetrievePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RetrievePasswordViewController.swift; path = FeedMeIOS/RetrievePasswordViewController.swift; sourceTree = "<group>"; };
+		966AA58B1CDDBE5200B6E141 /* PostOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostOrder.swift; sourceTree = "<group>"; };
+		966AA58D1CDDC06900B6E141 /* OrderDish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDish.swift; sourceTree = "<group>"; };
+		966AA58F1CDDCD1600B6E141 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		967C82591CB8C5D5006ED941 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9687A6231CB3C18600A0CCF5 /* SignInUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInUpViewController.swift; path = FeedMeIOS/SignInUpViewController.swift; sourceTree = "<group>"; };
 		968EA74B1CD4570E0024BD30 /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
 		96A855111CA4F1B900B275AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		96AB71EF1CDDE6FA00063C05 /* PostOrderHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostOrderHeader.swift; sourceTree = "<group>"; };
 		96C47DC21CBB47680003984D /* FeedMeSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedMeSettings.swift; sourceTree = "<group>"; };
 		96C47DC41CBB492D0003984D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		96C47DC71CBB51400003984D /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -225,6 +233,10 @@
 				963C16AC1C98FFEC006C534E /* RestaurantTableViewCell.swift */,
 				963C16AE1C9904CE006C534E /* RestaurantTableViewController.swift */,
 				964137051CABED9D0028C158 /* NewAddressViewController.swift */,
+				966AA58B1CDDBE5200B6E141 /* PostOrder.swift */,
+				96AB71EF1CDDE6FA00063C05 /* PostOrderHeader.swift */,
+				966AA58D1CDDC06900B6E141 /* OrderDish.swift */,
+				966AA58F1CDDCD1600B6E141 /* PaymentViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -476,6 +488,7 @@
 				963C16AF1C9904CE006C534E /* RestaurantTableViewController.swift in Sources */,
 				96D5D8921C9CF9F70049FC9D /* Dish.swift in Sources */,
 				9667F6111CB694C3001AC6FF /* RetrievePasswordViewController.swift in Sources */,
+				966AA58C1CDDBE5200B6E141 /* PostOrder.swift in Sources */,
 				961C2E221CA6197700C562F8 /* OrderTableViewCell.swift in Sources */,
 				96CFC4FB1C87FF2A0086F4EF /* AppDelegate.swift in Sources */,
 				96C47DC31CBB47680003984D /* FeedMeSettings.swift in Sources */,
@@ -485,12 +498,15 @@
 				96EF93141CA91821002C6623 /* AddressTableViewCell.swift in Sources */,
 				96C47DC51CBB492D0003984D /* SignUpViewController.swift in Sources */,
 				9644CE8D1CC0FC7700260498 /* OrderDetailTableViewCell.swift in Sources */,
+				966AA58E1CDDC06900B6E141 /* OrderDish.swift in Sources */,
 				9644CE8F1CC0FC8E00260498 /* OrderDetailTableViewController.swift in Sources */,
 				963A24CC1CD6E5B10048F121 /* FeedMeAlert.swift in Sources */,
 				96D5D8901C9CD4CB0049FC9D /* FeedMe.swift in Sources */,
 				961C2E241CA6199500C562F8 /* OrderTableViewController.swift in Sources */,
+				966AA5901CDDCD1600B6E141 /* PaymentViewController.swift in Sources */,
 				961CE1E21CD70D0800540294 /* EVObjectDescription.swift in Sources */,
 				7BEAF4C51CB8DB0300F1568B /* ViewControllerExtension.swift in Sources */,
+				96AB71F01CDDE6FA00063C05 /* PostOrderHeader.swift in Sources */,
 				96D5D89A1C9D009C0049FC9D /* DishTableViewController.swift in Sources */,
 				962C5CF01CAB7E010009CBF3 /* SSRadioButton.swift in Sources */,
 			);

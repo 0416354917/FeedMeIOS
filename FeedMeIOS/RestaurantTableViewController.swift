@@ -17,6 +17,10 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()   
         
+        
+        // Device ID
+        NSLog("Device ID: %@", UIDevice.currentDevice().identifierForVendor!.UUIDString)
+        
         // Initialization:
         FeedMe.Variable.images = [String: UIImage]()
         
