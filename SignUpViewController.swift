@@ -99,18 +99,11 @@ class SignUpViewController: UIViewController {
         let postString = "{\"email\":\"\(emailTextField.text!)\",\"password\":\"\(hashPassword)\"}"
         NSLog("post data: %@", postString)
         
-        let defaultString = "\"firstname\":\"defaultfirst\"," +
-        "\"lastname\":\"defaultlast\","
-        
-//        let jsonString = "{" + defaultString +
-//            "\"email\":" + "\"\(emailTextField.text!)\"," +
-//            "\"password\":" + "\"\(hashPassword)\"" +
-//        "}"
-        
         // Use EVReflection:
         let user = User(email: emailTextField.text!, password: hashPassword)
         user.setFirstName("default_firstname")
         user.setLastName("default_lastname")
+        // user.setMachineCode(UIDevice.currentDevice().identifierForVendor!.UUIDString)
         let jsonString = user.toJsonString(ConvertionOptions.None)
         
         NSLog("json string: %@", jsonString)
@@ -141,6 +134,7 @@ class SignUpViewController: UIViewController {
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
             NSLog("response string: %@", responseString!)
             
+            FeedMe.user = user
             FeedMe.Variable.userInLoginState = true
             self.dismissViewControllerAnimated(true, completion: nil)
         }

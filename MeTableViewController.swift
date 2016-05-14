@@ -27,8 +27,17 @@ class MeTableViewController: UITableViewController {
         if FeedMe.Variable.userInLoginState == false {
             let nextViewController = self.storyboard!.instantiateViewControllerWithIdentifier("sign_in_up")
             self.presentViewController(nextViewController, animated: true, completion: nil)
+        } else {
+            self.tableView.reloadData()
         }
     }
+    
+//    override func viewWillAppear(animated: Bool) {
+//        if FeedMe.Variable.userInLoginState == false {
+//            let nextViewController = self.storyboard!.instantiateViewControllerWithIdentifier("sign_in_up")
+//            self.presentViewController(nextViewController, animated: true, completion: nil)
+//        }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -38,24 +47,43 @@ class MeTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return 1
+        default:
+            return 0
+        }
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cellIdentifier = "MeTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MeTableViewCell
 
         // Configure the cell...
-
+        if FeedMe.user == nil {
+            cell.itemLabel.text = ""
+            return cell
+        }
+        
+        NSLog("user: %@", FeedMe.user!.toJsonString(.None))
+        
+        switch indexPath.section {
+        case 0:
+            cell.itemLabel.text = FeedMe.user!.getEmail()
+        case 1:
+            cell.itemLabel.text = "Settings"
+        default:
+            cell.itemLabel.text = ""
+        }
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

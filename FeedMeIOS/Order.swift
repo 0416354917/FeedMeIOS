@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Order {
+class Order: EVObject {
     
     // MARK: Properties
-    var userID: String?
+    var userID: Int?
     var restaurantID: Int?
     var orderTime: String?
     var deliveryAddress: String?
@@ -30,7 +30,12 @@ class Order {
 
     
     // MARK: Initialization
-    init(userID: String?, restaurantID: Int) {
+    required init() {
+        self.id2dish = [Int: Dish]()
+        self.id2count = [Int: Int]()
+    }
+    
+    init(userID: Int?, restaurantID: Int) {
         self.userID = userID
         self.restaurantID = restaurantID
         self.id2dish = [Int: Dish]()
@@ -52,7 +57,7 @@ class Order {
     }
     
     // Set the contact phone number.
-    func setPhoneNumber(phoneNumber: String) {
+    func _setPhoneNumber(phoneNumber: String) {
         self.phoneNumber = phoneNumber
     }
     
@@ -115,5 +120,13 @@ class Order {
     func dishQty(dish: Dish) -> Int {
         return self.id2count[dish.ID]!
     }
+    
+    // Create a POST order with the specified data format:
+    // e.g. postdata: {"order":{"userId":0,"restaurantId":18,"addressId":1,"paymentStatus":"false","totalPrice":1494},"dishes":[{"dishId":35,"amount":1,"price":14},{"dishId":36,"amount":1,"price":1480}]}
+//    func createPostOrder() -> PostOrder {
+//        let postOrder = PostOrder()
+//        
+//        return postOrder
+//    }
 
 }

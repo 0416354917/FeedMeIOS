@@ -17,6 +17,10 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()   
         
+        
+        // Device ID
+        NSLog("Device ID: %@", UIDevice.currentDevice().identifierForVendor!.UUIDString)
+        
         // Initialization:
         FeedMe.Variable.images = [String: UIImage]()
         
@@ -29,16 +33,8 @@ class RestaurantTableViewController: UITableViewController {
         } else {
             Reachability.alertNoInternetConnection(self)
         }
-        
-        test()
-        
     }
-    
-    func test() {
-        let user = User(email: "email", password: "password")
-        NSLog("to json string: %@", user.toJsonString(ConvertionOptions.None))
-    }
-    
+        
     func loadAllRestaurants(urlString: String) {
         let url = NSURL(string: urlString)
         
