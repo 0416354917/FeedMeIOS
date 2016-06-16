@@ -23,7 +23,8 @@ class DishTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        restaurantPhoto.image = UIImage(named: "no_image_available.png")
+//        restaurantPhoto.image = UIImage(named: "no_image_available.png")
+        restaurantPhoto.image = UIImage(named: "golden_drum.jpg")
         
         FeedMe.Variable.images = [String: UIImage]()
         FeedMe.Variable.order = Order(userID: FeedMe.Variable.userID, restaurantID: FeedMe.Variable.restaurantID!)
